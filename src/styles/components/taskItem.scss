@@ -1,0 +1,17 @@
+.fase {
+  color: white;
+  &--0 {
+    background-color: #da0c21;
+  }
+
+  &--1 {
+    background-color: #dc3545;
+  }
+  &--2 {
+    background-color: #fd7e14;
+  }
+
+  &--3 {
+    background-color: #198754;
+  }
+}

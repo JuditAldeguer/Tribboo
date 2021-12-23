@@ -1,0 +1,11 @@
+@import '../core/variables.scss';
+
+header {
+   display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 3rem;
+}
+.title {
+  color: black;
+  text-align: center;
+}

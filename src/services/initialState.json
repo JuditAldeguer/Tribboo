@@ -1,0 +1,116 @@
+[
+  {
+    "idTask": "b5561ab5-0c28-4801-941e-4750df2cf2fc", 
+    "taskName": "Piscina",
+    "description": "Lorem ipsum dolor sit...",
+    "startAt" : "21/12/2018",
+    "endAt": "24/12/2021",
+    "status": "TODO",
+    "phase": "1"
+  },
+  {
+    "idTask": "b5561ab5-0c28-4801-941e-4750df2cf2fd", 
+    "taskName": "Demolición de fachada",
+    "description": "Lorem ipsum dolor sit...",
+    "startAt" : "21/12/2018",
+    "endAt": "24/12/2021",
+    "status": "IN_PROGRESS",
+    "phase": "2"
+  },{
+    "idTask": "b5561ab5-0c28-4801-941e-4750df2cf2f3", 
+    "taskName": "Obtención de permisos",
+    "description": "Lorem ipsum dolor sit...",
+    "startAt" : "21/12/2018",
+    "endAt": "24/12/2021",
+    "status": "DONE",
+    "phase": "3"
+  },{
+    "idTask": "b5561ab5-0c28-4801-941e-4750df2cf2f4", 
+    "taskName": "Recogida de residuos",
+    "description": "Lorem ipsum dolor sit...",
+    "startAt" : "21/12/2018",
+    "endAt": "24/12/2021",
+    "status": "TODO",
+    "phase": "2"
+  },{
+    "idTask": "b5561ab5-0c28-4801-941e-4750df2cf2fz", 
+    "taskName": "Transporte de residuos",
+    "description": "Lorem ipsum dolor sit...",
+    "startAt" : "21/12/2018",
+    "endAt": "24/12/2021",
+    "status": "TODO",
+    "phase": "1"
+  },{
+    "idTask": "b5561ab5-0c28-4801-941e-4750df2cf2gz", 
+    "taskName": "Pintura",
+    "description": "Lorem ipsum dolor sit...",
+    "startAt" : "21/12/2018",
+    "endAt": "24/12/2021",
+    "status": "TODO",
+    "phase": "3"
+  },{
+    "idTask": "b5561ab5-0c28-4801-941e-4750df2cf234", 
+    "taskName": "Electricidad",
+    "description": "Lorem ipsum dolor sit...",
+    "startAt" : "21/12/2018",
+    "endAt": "24/12/2021",
+    "status": "IN_PROGRESS",
+    "phase": "1"
+  },{
+    "idTask": "b5561ab5-0c28-4801-941e-4750df2cf256", 
+    "taskName": "Conexiones",
+    "description": "Lorem ipsum dolor sit...",
+    "startAt" : "21/12/2018",
+    "endAt": "24/12/2021",
+    "status": "DONE",
+    "phase": "1"
+  },{
+    "idTask": "b5561ab5-0c28-4801-941e-4750df2cf2ad", 
+    "taskName": "Gasfitería",
+    "description": "Lorem ipsum dolor sit...",
+    "startAt" : "21/12/2018",
+    "endAt": "24/12/2021",
+    "status": "DONE",
+    "phase": "1"
+  },{
+    "idTask": "b5561ab5-0c28-4801-941e-4750df2cfadd", 
+    "taskName": "Instalación de calefacción",
+    "description": "Lorem ipsum dolor sit...",
+    "startAt" : "21/12/2018",
+    "endAt": "24/12/2021",
+    "status": "DONE",
+    "phase": "1"
+  },{
+    "idTask": "b5561ab5-0c28-4801-941e-4750df2cfkjd", 
+    "taskName": "Control de calefacción",
+    "description": "Lorem ipsum dolor sit...",
+    "startAt" : "21/12/2018",
+    "endAt": "24/12/2021",
+    "status": "DONE",
+    "phase": "2"
+  },{
+    "idTask": "b5561ab5-0c28-4801-941e-4750df2cf12d", 
+    "taskName": "Construcción de fachada",
+    "description": "Lorem ipsum dolor sit...",
+    "startAt" : "21/12/2018",
+    "endAt": "24/12/2021",
+    "status": "IN_PROGRESS",
+    "phase": "2"
+  },{
+    "idTask": "b5561ab5-0c28-4801-941e-4750df2cf777", 
+    "taskName": "Reforma de fachada",
+    "description": "Lorem ipsum dolor sit...",
+    "startAt" : "21/12/2018",
+    "endAt": "24/12/2021",
+    "status": "TODO",
+    "phase": "3"
+  },{
+    "idTask": "b5561ab5-0c28-4801-941e-4750df2cf908", 
+    "taskName": "Actualización de fachada",
+    "description": "Lorem ipsum dolor sit...",
+    "startAt" : "21/12/2018",
+    "endAt": "24/12/2021",
+    "status": "IN_PROGRESS",
+    "phase": "3"
+  }
+]
