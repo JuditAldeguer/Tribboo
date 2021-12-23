@@ -2,9 +2,15 @@
 import "../../styles/components/taskItem.scss";
 
 const TaskItem = (props) => {
+  const handleClickTask = (ev) => {
+    console.log(ev, "cliked");
+  };
+
   return (
     <>
-      <h3>{props.task.taskName}</h3> <i className="fas fa-ellipsis-h"></i>
+      <h3>{props.task.taskName}</h3>{" "}
+      <button onClick={handleClickTask}>...</button>{" "}
+      <i className="fas fa-ellipsis-h"></i>
       <p>{props.task.description}</p>
       <button className={`fase fase--${props.task.phase}`}>
         FASE {props.task.phase}

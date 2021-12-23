@@ -7,7 +7,7 @@ const Columns = (props) => {
   const renderListtoDo = () => {
     return props.toDo.map((task) => {
       return (
-        <li key={task.id} className="list-group-item">
+        <li key={task.idTask} className="list-group-item">
           <TaskItem task={task} />
         </li>
       );
@@ -15,14 +15,13 @@ const Columns = (props) => {
   };
 
   const renderListInProcess = () => {
-   debugger;
     return(
     props.inProcess.map((task) => {
       return (
-        <li key={task.id} className="list-group-item">
+        <li key={task.idTask} className="list-group-item">
           <TaskItem task={task} />
         </li>
-          );
+      );
       })
     );
   };
@@ -40,7 +39,6 @@ const Columns = (props) => {
   };
 
   // //handle
-  // debugger;
   // const handleUpdateData = (ev) => {
   //   ev.preventDefault();
   //   const newData =  {
@@ -52,7 +50,6 @@ const Columns = (props) => {
   //         status: "TODO",
   //         phase: "1",
   //   }
-  //   debugger;
   //   // props.handleData(newData);
   // };
 

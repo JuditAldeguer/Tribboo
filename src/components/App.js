@@ -34,37 +34,14 @@ function App() {
   const getUpdatedData = () => {
   //   // data.forEach(task => {
   //   //   if (task.status === "TODO" && toDo > 0) {
-  //   //     // setToDo([...toDo, task]);
-  //   //     console.log(toDo);
-
-  //   //   } if (task.status === "IN_PROGRESS") {
-  //   //     inProcess.push(task);
-  //   //   } if (task.status === "DONE") {
-  //   //     done.push(task);
-  //   //   }
-  //   // });
-
-    const newProcess = data.filter((task) => task.status === "IN_PROGRESS")
+     const newProcess = data.filter((task) => task.status === "IN_PROGRESS")
     setInProcess(newProcess);
     const newToDo = data.filter((task) => task.status === "TODO");
     setToDo(newToDo);
     const newDone = data.filter((task) => task.status === "DONE");
     setDone(newDone);
   };
-console.log(done);
-  // // const handleData = (newData) => {
-  // //   debugger;
-  // //   setData([...data, newData]);
-  // // };
-  // // const handleToDo = (toDo) => {
-  // //   setToDo(toDo);
-  // // };
-  // // const handleInProcess = (inProcess) => {
-  // //   setInProcess(inProcess);
-  // // };
-  // // const handleDone = (done) => {
-  // //   setDone(done);
-  // // };
+
 
   return (
     <div className="container">
@@ -74,9 +51,6 @@ console.log(done);
       <LateralMenu />
       <Columns
         toDo={toDo} done={done} inProcess={inProcess}
-        // handleToDo={handleToDo}
-                // handleInProcess={handleInProcess}
-                // handleDone={handleDone}
         // data={data}
         // handleData={handleData}
       />
