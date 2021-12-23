@@ -4,10 +4,7 @@ import PropTypes from 'prop-types';
 import '../../styles/components/input.scss';
 
 const Input = (props) => {
-  const p = props;
-  debugger;
-  console.log(p.inputValue);
-  //handle
+   //handle
   const handleChange = (ev) => {
     props.handleChange(ev.target.value);
   };

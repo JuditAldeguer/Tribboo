@@ -5,10 +5,7 @@ import user from "../images/user2.png";
 import Input from "./secondary-components/Input";
 
 const Header = (props) => {
-  debugger;
-console.log(props.inputValue);
-
-  const handleChange = (searchWord) => {
+   const handleChange = (searchWord) => {
     props.handleChange(searchWord);
   };
 
