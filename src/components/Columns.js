@@ -42,19 +42,21 @@ const Columns = (props) => {
       <div className="border vstack">
         <h2>
           A hacer{" "}
-          <button className="list-btn"
-          // onClick={handleUpdateData}
+          <button
+            className="list-btn"
+            // onClick={handleUpdateData}
           >
             <i className="fas fa-plus" />
           </button>
         </h2>
-        <ul >{props.toDo.length >= 1 ? renderListtoDo() : ""}</ul>
+        <ul>{props.toDo.length >= 1 ? renderListtoDo() : ""}</ul>
       </div>
       <div className="border vstack">
         <h2>
           En proceso{" "}
           <button
-          // onClick={handleUpdateData}
+            className="list-btn"
+            // onClick={handleUpdateData}
           >
             <i className="fas fa-plus" />
           </button>
@@ -65,7 +67,8 @@ const Columns = (props) => {
         <h2>
           Objetivos cumplidos{" "}
           <button
-          // onClick={handleUpdateData}
+            className="list-btn"
+            // onClick={handleUpdateData}
           >
             <i className="fas fa-plus" />
           </button>
