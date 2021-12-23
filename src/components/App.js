@@ -15,11 +15,13 @@ import NotFoundPage from './secondary-components/NotFoundPage';
 
 function App() {
   const [searchWord, setSearchWord] = useState("gola");
-
+  const handleChange = (searchWord) => {
+    setSearchWord(searchWord);
+  };
 
   return (
     <div className="container">
-      <Header inputValue={searchWord} />
+      <Header inputValue={searchWord} handleChange={handleChange} />
       <LateralMenu />
       <Columns />
       <Switch>

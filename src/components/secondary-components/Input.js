@@ -4,22 +4,27 @@ import PropTypes from 'prop-types';
 import '../../styles/components/input.scss';
 
 const Input = (props) => {
+  const p = props;
+  debugger;
+  console.log(p.inputValue);
   //handle
   const handleChange = (ev) => {
     props.handleChange(ev.target.value);
   };
+  
   return (
     <label className="label" htmlFor={props.id}>
       {props.labelText}
       <input
-        className="form-control me-2" 
+        className="form-control me-2"
         id={props.id}
         type={props.inputType}
         name={props.inputName}
         placeholder={props.inputPlaceholder}
-        value={props.searchWord}
+        value={props.inputValue}
         onChange={handleChange}
       />
+      <i className="fas fa-search"></i>
     </label>
   );
 };
@@ -30,15 +35,15 @@ Input.defaultProps = {
   name: "search",
   inputType: "text",
   placeholder: "Escribe aqui...",
-  labelText: "Escribe aqui: ",
+  labelText: "Escribe aqui: "
 };
 
 // PropTypes
 Input.propTypes = {
   id: PropTypes.string,
-  labelText: PropTypes.string.isRequired,
+  labelText: PropTypes.string,
   inputType: PropTypes.string,
-  inputName: PropTypes.string.isRequired,
+  inputName: PropTypes.string,
   inputPlaceholder: PropTypes.string,
   searchWord: PropTypes.string,
   handleChange: PropTypes.func.isRequired,

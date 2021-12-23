@@ -5,6 +5,13 @@ import user from "../images/user2.png";
 import Input from "./secondary-components/Input";
 
 const Header = (props) => {
+  debugger;
+console.log(props.inputValue);
+
+  const handleChange = (searchWord) => {
+    props.handleChange(searchWord);
+  };
+
   return (
     <header className="container">
       <section>
@@ -35,14 +42,15 @@ const Header = (props) => {
       <section className="row submenu">
         <form className="hstack">
           <button className="btn">
-            <i class="far fa-question-circle"></i>
+            <i className="far fa-question-circle"></i>
           </button>
           <button className="btn">
-            <i class="fas fa-share-alt"></i>
+            <i className="fas fa-share-alt"></i>
           </button>
           <Input
-            labelText={<i className="fas fa-search"></i>}
-            inputValue={props.searchWord}
+            labelText=""
+            inputValue={props.inputValue}
+            handleChange={handleChange}
             inputType="text"
           />
 
