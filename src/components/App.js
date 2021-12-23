@@ -6,7 +6,6 @@ import { Route, Switch } from 'react-router-dom';
 import callToApi from '../services/api';
 import ls from '../services/local-storage.js'; //localStorage
 //Styles
-import "bootstrap/scss/bootstrap.scss";
 import '../styles/App.scss';
 //Components
 import Header from './Header';

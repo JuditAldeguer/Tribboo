@@ -1,9 +1,14 @@
 @import '../core/variables.scss';
 
-body {
-  height: 100vh;
+button {
+  &:hover{
+    background-color: $primary;
+  }
 }
 
-button {
-  background-color: #ffc107;
+.btn-yellow{
+   border: none;
+   padding: 0.2rem 1rem;
+   margin: 0.2rem;
+   border-radius: 1rem;
 }

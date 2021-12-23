@@ -1,2 +1,10 @@
+//overwriten theme variables
+$primary: #f8e74d;
+$secondary: #6c757d;
+$dark: #6c757d;
+
 @import 'core/reset.scss';
 @import 'pages/principal.scss';
+
+//bootstrap
+@import "~bootstrap/scss/bootstrap.scss";
