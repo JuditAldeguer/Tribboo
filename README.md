@@ -1,11 +1,5 @@
 # Prueba Técnica - Tribboo
 
-## Info
-
-¡Muy buenas! 👋
-
-Aqui facilito el resultado de mi prueba técnica en Tribboo.
-
 ## Mi proyecto
 
 - Dónde localizarlo  
