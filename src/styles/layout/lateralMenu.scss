@@ -1,2 +1,27 @@
+@import '../core/variables.scss';
 
-
+.nav{
+  height: 100vh;
+  background-color: $secondary;
+  width: fit-content;
+  padding-top: 1rem;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between
+;
+  .first-el{    
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    .logo{
+      background-color: white;
+      
+    }
+  }
+  .penultimate-el{
+    margin-top: 5rem;
+  }
+  .last-el{
+    margin-top: 7rem;
+    margin-bottom: 2rem;
+  }
+}

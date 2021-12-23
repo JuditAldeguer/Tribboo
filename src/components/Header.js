@@ -1,10 +1,10 @@
 //Styless
 import "../styles/layout/header.scss";
+import user from "../images/user2.png";
 //Components
 import Input from "./secondary-components/Input";
 
 const Header = (props) => {
-  debugger;
   return (
     <header>
       <section>
@@ -33,17 +33,23 @@ const Header = (props) => {
         </div>
       </section>
       <section className="row submenu">
-        <form>
-          <button className="btn"><i class="far fa-question-circle"></i></button> 
-          <button className="btn"><i class="fas fa-share-alt"></i></button>
+        <form className="hstack">
+          <button className="btn">
+            <i class="far fa-question-circle"></i>
+          </button>
+          <button className="btn">
+            <i class="fas fa-share-alt"></i>
+          </button>
           <Input
             labelText={<i className="fas fa-search"></i>}
             inputValue={props.searchWord}
+            inputType="text"
           />
+        
+            <img className="user" src={user} alt="usuario" />
+          
         </form>
-        <div>
-          <image src="" alt="" />
-        </div>
+
         <section className="submenu-rigth">
           <button className="btn-yellow submenu-rigth__button">Gantt</button>
           <button className="btn-yellow submenu-rigth__button">Kamban</button>

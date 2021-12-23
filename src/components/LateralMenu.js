@@ -1,14 +1,14 @@
 import { NavLink } from 'react-router-dom';
-import logo from "../images/logo4.png";
+import logo from "../images/logo.png";
 //Styles
 import '../styles/layout/lateralMenu.scss';
 
 const LateralMenu = (props) => {
   return (
-    <nav>
+    <nav className="fixed-top">
       <ul className="nav flex-column">
-        <li className="first-element">
-          <img className='logo' src={logo} alt="logo" />
+        <li className="first-el">
+          <img className="logo" src={logo} alt="logo" />
         </li>
 
         <li>
@@ -55,15 +55,15 @@ const LateralMenu = (props) => {
             </button>
           </NavLink>
         </li>
-        <li>
-          <NavLink to="/" title="inicio" activeClassName="selected-link">
+        <li className="penultimate-el">
+          <NavLink  to="/" title="inicio" activeClassName="selected-link">
             <button className="btn btn-line">
               {" "}
               <i className="far fa-star"></i>
             </button>
           </NavLink>
         </li>
-        <li className="last-element">
+        <li className="last-el">
           <NavLink to="/" title="inicio" activeClassName="selected-link">
             <button className="btn btn-line">
               {" "}

@@ -8,12 +8,11 @@ const Input = (props) => {
   const handleChange = (ev) => {
     props.handleChange(ev.target.value);
   };
-  debugger;
   return (
     <label className="label" htmlFor={props.id}>
       {props.labelText}
       <input
-        className="input"
+        className="form-control me-2" 
         id={props.id}
         type={props.inputType}
         name={props.inputName}

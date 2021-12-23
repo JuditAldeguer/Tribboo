@@ -6,42 +6,5 @@ button {
     opacity: 0.8;
   }
 }
-.btn-yellow{
-   padding: 0.2rem 1rem;
-   margin: 0.2rem;
-   border-radius: 1rem;
-   &:hover{
-    background-color: $primary;
-  }
-}
-.btn-line{
-  &:hover{
-    border-right: solid 0.5rem $primary;
-  }
-}
-.selected-link {
-  color: $primary;
-  font-weight: bolder;
-  font-size: larger;
-}
 
-.nav{
-  background-color: $secondary;
-  width: fit-content;
-  padding-top: 1rem;
-  text-align: center;
-  align-items: center;
-;
-  .first-element{
-    margin-bottom: 2rem;
-    .logo{
-      background-color: white;
-      
-    }
-  }
-  .last-element{
-    margin-top: 5rem;
-    float: bottom;
-  }
-}
 
