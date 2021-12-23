@@ -3,17 +3,18 @@ import "../../styles/components/taskItem.scss";
 
 const TaskItem = (props) => {
   const handleClickTask = (ev) => {
-    console.log(ev, "cliked");
+    const el = ev.target;
+    const p = el.parentElement;
+    console.log(p.id);
   };
 
   return (
-    <li key={props.task.idTask} className="list-group-item bg-light">
-      <h3
-        onClick={(ev) => {
-        
-          console.log(ev, "cliked");
-        }}
-      >
+    <li
+      key={props.task.idTask}
+      id={props.task.idTask}
+       className="list-group-item bg-light"
+    >
+      <h3 onClick={handleClickTask}>
         {props.task.taskName}
         <i className="fas fa-ellipsis-h"></i>{" "}
       </h3>{" "}
