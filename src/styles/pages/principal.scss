@@ -12,3 +12,9 @@ button {
    margin: 0.2rem;
    border-radius: 1rem;
 }
+
+.selected-link {
+  color: $primary;
+  font-weight: bolder;
+  font-size: larger;
+}

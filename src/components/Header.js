@@ -1,26 +1,41 @@
 //Styless
-import '../styles/layout/header.scss';
+import "../styles/layout/header.scss";
 //Components
-import Input from './secondary-components/Input';
+import Input from "./secondary-components/Input";
 
 const Header = (props) => {
   debugger;
   return (
     <header>
       <section>
-        <h1 className="title">
-          Planning/ Nombre del Proyecto <i class="fas fa-chevron-down"></i> <i class="far fa-star"></i>
-        </h1>
-        <section className="submenu">
-          <button className="btn-yellow submenu__button">Presupuestos</button>
-          <button className="btn-yellow submenu__button">Planning</button>
-          <button className="btn-yellow submenu__button">Certificaciones</button>
-        </section>
+        <div className="row">
+          <h1 className="title">
+            Planning/ Nombre del Proyecto{" "}
+            <i
+              role="button"
+              className="fas fa-chevron-down"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseButons"
+              aria-expanded="true"
+              aria-controls="collapseButons"
+            ></i>{" "}
+            {/* pendiente de hacerlo interactivo - collapsable - cambiar clase collapsed por collapse */}
+            <i className="far fa-star"></i>
+          </h1>
+          <section className="collapsed" id="collapseButons">
+            <button className="btn-yellow submenu__button">Presupuestos</button>
+            <button className="btn-yellow submenu__button">Planning</button>
+            <button className="btn-yellow submenu__button">
+              Certificaciones
+            </button>
+          </section>
+        </div>
       </section>
-      <section>
+      <section className="row submenu">
         <form>
           <Input
-            labelText={<i class="fas fa-search"></i>}
+            labelText={<i className="fas fa-search"></i>}
             inputValue={props.searchWord}
           />
         </form>
@@ -30,7 +45,9 @@ const Header = (props) => {
         <section className="submenu-rigth">
           <button className="btn-yellow submenu-rigth__button">Gantt</button>
           <button className="btn-yellow submenu-rigth__button">Kamban</button>
-          <button className="btn-yellow submenu-rigth__button">Calendario</button>
+          <button className="btn-yellow submenu-rigth__button">
+            Calendario
+          </button>
         </section>
       </section>
     </header>

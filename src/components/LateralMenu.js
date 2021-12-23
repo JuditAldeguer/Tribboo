@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 //Styles
-import '../styles/components/lateralMenu.scss';
+import '../styles/layout/lateralMenu.scss';
 
 const LateralMenu = (props) => {
   return (
@@ -11,42 +11,42 @@ const LateralMenu = (props) => {
         </li>
         <li>
           <NavLink to="/" title="inicio" activeClassName="selected-link">
-          <i class="fas fa-home"></i>
+          <i className="fas fa-home"></i>
           </NavLink>
         </li>
         <li>
           <NavLink to="/" title="inicio" activeClassName="selected-link">
-          <i class="far fa-check-square"></i>
+          <i className="far fa-check-square"></i>
           </NavLink>
         </li>
         <li>
           <NavLink to="/" title="inicio" activeClassName="selected-link">
-          <i class="far fa-envelope"></i>
+          <i className="far fa-envelope"></i>
           </NavLink>
         </li>
         <li>
           <NavLink to="/" title="inicio" activeClassName="selected-link">
-          <i class="far fa-user"></i>
+          <i className="far fa-user"></i>
           </NavLink>
         </li>
         <li>
           <NavLink to="/" title="inicio" activeClassName="selected-link">
-          <i class="far fa-calendar-alt"></i>
+          <i className="far fa-calendar-alt"></i>
           </NavLink>
         </li>
         <li>
           <NavLink to="/" title="inicio" activeClassName="selected-link">
-          <i class="far fa-folder-open"></i>
+          <i className="far fa-folder-open"></i>
           </NavLink>
         </li>
         <li>
           <NavLink to="/" title="inicio" activeClassName="selected-link">
-          <i class="far fa-star"></i>
+          <i className="far fa-star"></i>
           </NavLink>
         </li>
         <li>
           <NavLink to="/" title="inicio" activeClassName="selected-link">
-          <i class="fas fa-cog"></i>
+          <i className="fas fa-cog"></i>
           </NavLink>
         </li>
       </ul>

@@ -18,10 +18,10 @@ function App() {
 
 
   return (
-    <div className="page">
+    <div className="container">
       <Header inputValue={searchWord} />
       <LateralMenu />
-      <Main/>
+      <Main />
       <Switch>
         <Route path="/" exact />
         <Route>
