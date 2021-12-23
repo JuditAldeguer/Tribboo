@@ -34,6 +34,8 @@ const Header = (props) => {
       </section>
       <section className="row submenu">
         <form>
+          <button className="btn"><i class="far fa-question-circle"></i></button> 
+          <button className="btn"><i class="fas fa-share-alt"></i></button>
           <Input
             labelText={<i className="fas fa-search"></i>}
             inputValue={props.searchWord}

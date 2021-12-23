@@ -1,18 +1,24 @@
 @import '../core/variables.scss';
 
 button {
-  &:hover{
-    background-color: $primary;
+  border: none;
+   &:hover{
+    opacity: 0.8;
   }
 }
-
 .btn-yellow{
-   border: none;
    padding: 0.2rem 1rem;
    margin: 0.2rem;
    border-radius: 1rem;
+   &:hover{
+    background-color: $primary;
+  }
 }
-
+.btn-line{
+  &:hover{
+    border-right: solid 0.5rem $primary;
+  }
+}
 .selected-link {
   color: $primary;
   font-weight: bolder;

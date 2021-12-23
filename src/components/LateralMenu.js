@@ -11,42 +11,42 @@ const LateralMenu = (props) => {
         </li>
         <li>
           <NavLink to="/" title="inicio" activeClassName="selected-link">
-          <i className="fas fa-home"></i>
+          <button className="btn btn-line"><i className="fas fa-home"></i></button>
           </NavLink>
         </li>
         <li>
           <NavLink to="/" title="inicio" activeClassName="selected-link">
-          <i className="far fa-check-square"></i>
+          <button className="btn btn-line"><i className="far fa-check-square"></i></button>
           </NavLink>
         </li>
         <li>
           <NavLink to="/" title="inicio" activeClassName="selected-link">
-          <i className="far fa-envelope"></i>
+          <button className="btn btn-line"><i className="far fa-envelope"></i></button>
           </NavLink>
         </li>
         <li>
           <NavLink to="/" title="inicio" activeClassName="selected-link">
-          <i className="far fa-user"></i>
+          <button className="btn btn-line"><i className="far fa-user"></i></button>
           </NavLink>
         </li>
         <li>
           <NavLink to="/" title="inicio" activeClassName="selected-link">
-          <i className="far fa-calendar-alt"></i>
+         <button className="btn btn-line"> <i className="far fa-calendar-alt"></i></button>
           </NavLink>
         </li>
         <li>
           <NavLink to="/" title="inicio" activeClassName="selected-link">
-          <i className="far fa-folder-open"></i>
+         <button className="btn btn-line"> <i className="far fa-folder-open"></i></button>
           </NavLink>
         </li>
         <li>
           <NavLink to="/" title="inicio" activeClassName="selected-link">
-          <i className="far fa-star"></i>
+         <button className="btn btn-line"> <i className="far fa-star"></i></button>
           </NavLink>
         </li>
         <li>
           <NavLink to="/" title="inicio" activeClassName="selected-link">
-          <i className="fas fa-cog"></i>
+         <button className="btn btn-line"> <i className="fas fa-cog"></i></button>
           </NavLink>
         </li>
       </ul>
