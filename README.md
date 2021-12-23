@@ -9,7 +9,7 @@ Aqui facilito el resultado de mi prueba técnica en Tribboo.
 ## Mi proyecto
 
 - Dónde localizarlo  
-   Mi trabajo se encuentra en el repositorio de Github y puedes encontrar facilmente el link a Github Page que da acceso a la última versión de mi **rama master** en el apartado _About_. [Acceder a la web](http://beta.adalab.es/modulo-3-evaluacion-final-JuditAldeguer/)
+   Mi trabajo se encuentra en el repositorio de Github y puedes encontrar facilmente el link a Github Page que da acceso a la última versión de mi **rama master** en el apartado _About_. [Acceder a la web](https://github.com/JuditAldeguer/Tribboo.git)
 
   Deseo destacar que he seguido un **diseño responsive**, el cual varia al pasar de versión mobil a tablet y a desktop.
 
