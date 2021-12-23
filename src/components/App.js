@@ -34,7 +34,7 @@ function App() {
   const getUpdatedData = () => {
   //   // data.forEach(task => {
   //   //   if (task.status === "TODO" && toDo > 0) {
-     const newProcess = data.filter((task) => task.status === "IN_PROGRESS")
+    const newProcess = data.filter((task) => task.status === "IN_PROGRESS")
     setInProcess(newProcess);
     const newToDo = data.filter((task) => task.status === "TODO");
     setToDo(newToDo);
