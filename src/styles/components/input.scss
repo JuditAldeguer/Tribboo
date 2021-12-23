@@ -1,13 +1,22 @@
 @import '../core/mixins.scss';
 
-.label {
-  width: 131px;
-  display: inline-block;
-  margin: 0.5rem;
-  @include tablet {
-    width: min-content;
-  }
-  input {
-    width: 131px;
-  }
+.inner-addon {
+  position: relative;
+}
+.inner-addon .fas {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+.left-addon .fas {
+  left: 0px;
+}
+.right-addon .fas {
+  right: 0px;
+}
+.left-addon input {
+  padding-left: 30px;
+}
+.right-addon input {
+  padding-right: 30px;
 }
