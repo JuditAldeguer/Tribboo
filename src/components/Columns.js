@@ -7,9 +7,7 @@ const Columns = (props) => {
   const renderListtoDo = () => {
     return props.toDo.map((task) => {
       return (
-        <li key={task.idTask} className="list-group-item">
           <TaskItem task={task} />
-        </li>
       );
     });
   };
@@ -18,9 +16,7 @@ const Columns = (props) => {
     return(
     props.inProcess.map((task) => {
       return (
-        <li key={task.idTask} className="list-group-item">
           <TaskItem task={task} />
-        </li>
       );
       })
     );
@@ -30,9 +26,7 @@ const Columns = (props) => {
     return (
       props.done.map((task) => {
         return (
-          <li key={task.idTask} className="list-group-item">
             <TaskItem task={task} />
-          </li>
         );
       })
     );

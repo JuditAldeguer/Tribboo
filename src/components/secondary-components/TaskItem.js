@@ -7,7 +7,7 @@ const TaskItem = (props) => {
   };
 
   return (
-    <>
+    <li key={props.task.idTask} className="list-group-item">
       <h3
         onClick={(ev) => {
           debugger;
@@ -15,8 +15,8 @@ const TaskItem = (props) => {
         }}
       >
         {props.task.taskName}
-      <i className="fas fa-ellipsis-h"></i> </h3>{" "}
-      
+        <i className="fas fa-ellipsis-h"></i>{" "}
+      </h3>{" "}
       <p>{props.task.description}</p>
       <button className={`fase fase--${props.task.phase}`}>
         FASE {props.task.phase}
@@ -24,7 +24,7 @@ const TaskItem = (props) => {
       <p className="date">
         {props.task.startAt} - {props.task.endAt}
       </p>
-    </>
+    </li>
   );
 };
 

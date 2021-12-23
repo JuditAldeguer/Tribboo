@@ -1,4 +1,6 @@
+import { unsupportedEnvironment } from 'node-sass/lib/errors';
 import { NavLink } from 'react-router-dom';
+import { v4 as uuid } from 'uuid';
 import logo from "../images/logo.png";
 //Styles
 import '../styles/layout/lateralMenu.scss';
@@ -7,39 +9,39 @@ const LateralMenu = (props) => {
   return (
     <nav className="fixed-top">
       <ul className="nav flex-column">
-        <li className="first-el">
+        <li key={uuid()} className="first-el">
           <img className="logo" src={logo} alt="logo" />
         </li>
 
-        <li>
+        <li key={uuid()}>
           <NavLink to="/" title="inicio" activeClassName="selected-link">
             <button className="btn btn-line">
               <i className="fas fa-home"></i>
             </button>
           </NavLink>
         </li>
-        <li>
+        <li key={uuid()}>
           <NavLink to="/" title="inicio" activeClassName="selected-link">
             <button className="btn btn-line">
               <i className="far fa-check-square"></i>
             </button>
           </NavLink>
         </li>
-        <li>
+        <li key={uuid()}>
           <NavLink to="/" title="inicio" activeClassName="selected-link">
             <button className="btn btn-line">
               <i className="far fa-envelope"></i>
             </button>
           </NavLink>
         </li>
-        <li>
+        <li key={uuid()}>
           <NavLink to="/" title="inicio" activeClassName="selected-link">
             <button className="btn btn-line">
               <i className="far fa-user"></i>
             </button>
           </NavLink>
         </li>
-        <li>
+        <li key={uuid()}>
           <NavLink to="/" title="inicio" activeClassName="selected-link">
             <button className="btn btn-line">
               {" "}
@@ -47,7 +49,7 @@ const LateralMenu = (props) => {
             </button>
           </NavLink>
         </li>
-        <li>
+        <li key={uuid()}>
           <NavLink to="/" title="inicio" activeClassName="selected-link">
             <button className="btn btn-line">
               {" "}
@@ -55,15 +57,15 @@ const LateralMenu = (props) => {
             </button>
           </NavLink>
         </li>
-        <li className="penultimate-el">
-          <NavLink  to="/" title="inicio" activeClassName="selected-link">
+        <li key={uuid()} className="penultimate-el">
+          <NavLink to="/" title="inicio" activeClassName="selected-link">
             <button className="btn btn-line">
               {" "}
               <i className="far fa-star"></i>
             </button>
           </NavLink>
         </li>
-        <li className="last-el">
+        <li key={uuid()} className="last-el">
           <NavLink to="/" title="inicio" activeClassName="selected-link">
             <button className="btn btn-line">
               {" "}
