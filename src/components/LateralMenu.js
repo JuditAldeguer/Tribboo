@@ -7,7 +7,7 @@ import '../styles/layout/lateralMenu.scss';
 
 const LateralMenu = (props) => {
   return (
-    <nav className="fixed-top">
+    <nav className="nav fixed-top">
       <ul className="nav flex-column">
         <li key={uuid()} className="first-el">
           <img className="logo" src={logo} alt="logo" />
