@@ -5,9 +5,9 @@ import user from "../images/user2.png";
 import Input from "./secondary-components/Input";
 
 const Header = (props) => {
-   const handleChange = (searchWord) => {
-    props.handleChange(searchWord);
-  };
+  //  const handleChange = (searchWord) => {
+  //   props.handleChange(searchWord);
+  // };
 
   return (
     <header className="container">
@@ -47,7 +47,7 @@ const Header = (props) => {
           <Input
             labelText=""
             inputValue={props.inputValue}
-            handleChange={handleChange}
+            // handleChange={handleChange}
             inputType="text"
           />
 

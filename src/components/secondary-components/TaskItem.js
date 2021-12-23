@@ -1,14 +1,16 @@
 //Styles
 import "../../styles/components/taskItem.scss";
 
-const TaskItem = (task) => {
+const TaskItem = (props) => {
   return (
     <>
-      <h3>{task[0].taskName}</h3> <i className="fas fa-ellipsis-h"></i>
-      <p>{task[0].description}</p>
-      <button className={`fase fase--${task[0].phase}`}>FASE {task[0].phase}</button>
+      <h3>{props.task.taskName}</h3> <i className="fas fa-ellipsis-h"></i>
+      <p>{props.task.description}</p>
+      <button className={`fase fase--${props.task.phase}`}>
+        FASE {props.task.phase}
+      </button>
       <p className="date">
-        {task[0].startAt} - {task[0].endAt}
+        {props.task.startAt} - {props.task.endAt}
       </p>
     </>
   );

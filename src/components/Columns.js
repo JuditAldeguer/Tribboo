@@ -1,57 +1,97 @@
-import TaskItem from './secondary-components/TaskItem';
+import TaskItem from "./secondary-components/TaskItem";
 //Styles
-import '../styles/components/columns.scss';
+import "../styles/components/columns.scss";
 
-const Columns = (props) => {  
-
+const Columns = (props) => {
+  //render
   const renderListtoDo = () => {
-    props.toDo.map((task) => {
+    return props.toDo.map((task) => {
       return (
-           <li key={task.id} className="list-group-item">
-              <TaskItem task={task} />
-            </li>);
+        <li key={task.id} className="list-group-item">
+          <TaskItem task={task} />
+        </li>
+      );
     });
   };
-    
-    const renderListInProcess = () => {
-      props.inProcess.map((task) => {
+
+  const renderListInProcess = () => {
+   debugger;
+    return(
+    props.inProcess.map((task) => {
+      return (
+        <li key={task.id} className="list-group-item">
+          <TaskItem task={task} />
+        </li>
+          );
+      })
+    );
+  };
+
+  const renderListDone = () => {
+    return (
+      props.done.map((task) => {
         return (
-          <li key={task.id} className="list-group-item">
+          <li key={task.idTask} className="list-group-item">
             <TaskItem task={task} />
           </li>
         );
-      });
-    };
+      })
+    );
+  };
 
-   const renderListDone = () => {
-     props.done.map((task) => {
-       return (
-         <li key={task.id} className="list-group-item">
-           <TaskItem task={task} />
-         </li>
-       );
-     });
-   };
+  // //handle
+  // debugger;
+  // const handleUpdateData = (ev) => {
+  //   ev.preventDefault();
+  //   const newData =  {
+  //         idTask: "b5561ab5-0c28-4801-941e-4750df2cf2fc",
+  //         taskName: "NEW",
+  //         description: "New new new...",
+  //         startAt: "01/12/2018",
+  //         endAt: "02/12/2021",
+  //         status: "TODO",
+  //         phase: "1",
+  //   }
+  //   debugger;
+  //   // props.handleData(newData);
+  // };
 
   return (
     <main className="hstack gap-3 container">
       <div className="bg-light border vstack">
         <h2>
-          A hacer <i className="fas fa-plus"></i>
+          A hacer{" "}
+          <button
+          // onClick={handleUpdateData}
+          >
+            <i className="fas fa-plus" />
+          </button>
         </h2>
-        <ul>{renderListtoDo()}</ul>
+        <ul>{props.toDo.length >= 1 ? renderListtoDo() : ""}</ul>
       </div>
       <div className="bg-light border vstack">
         <h2>
-          En proceso <i className="fas fa-plus"></i>
+          En proceso{" "}
+          <button
+          // onClick={handleUpdateData}
+          >
+            <i className="fas fa-plus" />
+          </button>
         </h2>
-        <ul>{renderListInProcess()}</ul>
+        <ul>
+          {props.inProcess.length >= 1 ? renderListInProcess() : ""}
+        </ul>
       </div>
       <div className="bg-light border vstack">
         <h2>
-          Objetivos cumplidos <i className="fas fa-plus"></i>
+          Objetivos cumplidos{" "}
+          <button
+          // onClick={handleUpdateData}
+          >
+            <i className="fas fa-plus" />
+          </button>
         </h2>
-        <ul>{renderListDone()}</ul>
+        <ul>{props.done.length >= 1 ? renderListDone() : ""}</ul>
       </div>
     </main>
   );
