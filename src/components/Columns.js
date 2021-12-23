@@ -8,7 +8,7 @@ const Columns = (props) => {
             <TaskItem/>);
     };
   return (
-    <main className="hstack gap-3">
+    <main className="hstack gap-3 container">
       <div className="bg-light border vstack">
         <h2>
           A hacer <i className="fas fa-plus"></i>

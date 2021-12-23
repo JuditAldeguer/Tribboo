@@ -5,7 +5,7 @@ import '../../styles/components/taskItem.scss';
 
 const TaskItem = (props) => {
   return (
-    <ul>
+    <ul className="container">
       <li className="list-group-item">
         <h3>{t[0].taskName}</h3> <i className="fas fa-ellipsis-h"></i>
         <p>{t[0].description}</p>

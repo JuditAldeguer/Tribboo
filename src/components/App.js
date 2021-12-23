@@ -10,7 +10,7 @@ import '../styles/App.scss';
 //Components
 import Header from './Header';
 import LateralMenu from './LateralMenu';
-import Main from './Columns';
+import Columns from "./Columns";
 import NotFoundPage from './secondary-components/NotFoundPage';
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
     <div className="container">
       <Header inputValue={searchWord} />
       <LateralMenu />
-      <Main />
+      <Columns />
       <Switch>
         <Route path="/" exact />
         <Route>

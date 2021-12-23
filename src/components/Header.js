@@ -6,7 +6,7 @@ import Input from "./secondary-components/Input";
 
 const Header = (props) => {
   return (
-    <header>
+    <header className="container">
       <section>
         <div className="row">
           <h1 className="title">
@@ -45,9 +45,8 @@ const Header = (props) => {
             inputValue={props.searchWord}
             inputType="text"
           />
-        
-            <img className="user" src={user} alt="usuario" />
-          
+
+          <img className="user" src={user} alt="usuario" />
         </form>
 
         <section className="submenu-rigth">
