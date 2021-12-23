@@ -53,4 +53,4 @@ Aqui facilito el resultado de mi prueba técnica en Tribboo.
   Una vez se dispone de estas herramientas bien ubicadas, con los comandos <npm install> y <npm start> podrás empezar a hacer uso del React-Starter-Kit y sus facilidades.
 
 Espero que te guste mi trabajo y que puedas darme indicaciones para seguir mejorando.  
-Gracias por adelantado!!!
+Gracias por adelantado!!
