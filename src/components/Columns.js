@@ -6,30 +6,20 @@ const Columns = (props) => {
   //render
   const renderListtoDo = () => {
     return props.toDo.map((task) => {
-      return (
-          <TaskItem task={task} />
-      );
+      return <TaskItem task={task} />;
     });
   };
 
   const renderListInProcess = () => {
-    return(
-    props.inProcess.map((task) => {
-      return (
-          <TaskItem task={task} />
-      );
-      })
-    );
+    return props.inProcess.map((task) => {
+      return <TaskItem task={task} />;
+    });
   };
 
   const renderListDone = () => {
-    return (
-      props.done.map((task) => {
-        return (
-            <TaskItem task={task} />
-        );
-      })
-    );
+    return props.done.map((task) => {
+      return <TaskItem task={task} />;
+    });
   };
 
   // //handle
@@ -46,21 +36,21 @@ const Columns = (props) => {
   //   }
   //   // props.handleData(newData);
   // };
-
+  
   return (
     <main className="hstack gap-3 container">
-      <div className="bg-light border vstack">
+      <div className="border vstack">
         <h2>
           A hacer{" "}
-          <button
+          <button className="list-btn"
           // onClick={handleUpdateData}
           >
             <i className="fas fa-plus" />
           </button>
         </h2>
-        <ul>{props.toDo.length >= 1 ? renderListtoDo() : ""}</ul>
+        <ul >{props.toDo.length >= 1 ? renderListtoDo() : ""}</ul>
       </div>
-      <div className="bg-light border vstack">
+      <div className="border vstack">
         <h2>
           En proceso{" "}
           <button
@@ -69,11 +59,9 @@ const Columns = (props) => {
             <i className="fas fa-plus" />
           </button>
         </h2>
-        <ul>
-          {props.inProcess.length >= 1 ? renderListInProcess() : ""}
-        </ul>
+        <ul>{props.inProcess.length >= 1 ? renderListInProcess() : ""}</ul>
       </div>
-      <div className="bg-light border vstack">
+      <div className="border vstack">
         <h2>
           Objetivos cumplidos{" "}
           <button

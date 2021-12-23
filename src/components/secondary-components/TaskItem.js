@@ -7,10 +7,10 @@ const TaskItem = (props) => {
   };
 
   return (
-    <li key={props.task.idTask} className="list-group-item">
+    <li key={props.task.idTask} className="list-group-item bg-light">
       <h3
         onClick={(ev) => {
-          debugger;
+        
           console.log(ev, "cliked");
         }}
       >
