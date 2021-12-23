@@ -15,8 +15,8 @@ const TaskItem = (props) => {
         }}
       >
         {props.task.taskName}
-      </h3>{" "}
-      <button>...</button> <i className="fas fa-ellipsis-h"></i>
+      <i className="fas fa-ellipsis-h"></i> </h3>{" "}
+      
       <p>{props.task.description}</p>
       <button className={`fase fase--${props.task.phase}`}>
         FASE {props.task.phase}
