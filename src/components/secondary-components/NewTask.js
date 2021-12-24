@@ -3,12 +3,15 @@ import { Form, Row, Col, Button } from "react-bootstrap";
 import "../../styles/components/newTask.scss";
 
 const NewTask = (props) => {
+    const handleCancel = (ev) => { };
+
     return (
-      <Form>
+      <Form className="container bg-light newTask">
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridId">
             <Form.Label>Identificador</Form.Label>
             <Form.Control
+              size="sm"
               type="text"
               placeholder="Ej: b5561ab5-0c28-4801-941e-4750df2cf2fc"
             />
@@ -16,26 +19,25 @@ const NewTask = (props) => {
 
           <Form.Group as={Col} controlId="formGridTask">
             <Form.Label>Nombre de la tarea</Form.Label>
-            <Form.Control type="text" placeholder="Ej: Piscina" />
+            <Form.Control size="sm" type="text" placeholder="Ej: Piscina" />
           </Form.Group>
         </Row>
 
         <Form.Group className="mb-3" controlId="formGridDescription">
           <Form.Label>Descripción</Form.Label>
-          <Form.Control placeholder="Ej: Lorem ipsum dolor sit.." />
+          <Form.Control size="sm" placeholder="Ej: Lorem ipsum dolor sit.." />
         </Form.Group>
-
-        <Form.Group className="mb-3" controlId="formGridsStartAt">
-          <Form.Label>Fecha inicio</Form.Label>
-          <Form.Control placeholder="Ej: 21/02/2018" />
-        </Form.Group>
-
         <Row className="mb-3">
+          <Form.Group as={Col} className="mb-3" controlId="formGridsStartAt">
+            <Form.Label>Fecha inicio</Form.Label>
+            <Form.Control size="sm" placeholder="Ej: 21/02/2018" />
+          </Form.Group>
           <Form.Group as={Col} controlId="formGridEndAt">
             <Form.Label>Fecha fin</Form.Label>
-            <Form.Control placeholder="Ej: 21/10/2018" />
+            <Form.Control size="sm" placeholder="Ej: 21/10/2018" />
           </Form.Group>
-
+        </Row>
+        <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridState">
             <Form.Label>Estado</Form.Label>
             <Form.Select defaultValue="Escoge el estado...">
@@ -46,7 +48,7 @@ const NewTask = (props) => {
             </Form.Select>
           </Form.Group>
           <Form.Group as={Col} controlId="formGridState">
-            <Form.Label>Estado</Form.Label>
+            <Form.Label>Fase</Form.Label>
             <Form.Select defaultValue="Escoge la fase...">
               <option disabled>Escoge la fase...</option>
               <option value={"1"}>1</option>
@@ -56,9 +58,19 @@ const NewTask = (props) => {
           </Form.Group>
         </Row>
 
-        <Button variant="primary" type="submit">
-          Añadir
-        </Button>
+        <Row className="mb-3">
+          <Form.Group as={Col} controlId="formGridState">
+            <Button variant="dark" type="submit">
+              Cancelar
+            </Button>
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formGridState">
+            <Button variant="primary" type="submit" onClick={handleCancel}>
+              Añadir
+            </Button>
+          </Form.Group>
+        </Row>
       </Form>
     );
 };
