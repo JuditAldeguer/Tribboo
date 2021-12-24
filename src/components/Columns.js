@@ -5,6 +5,7 @@ import Input from "./secondary-components/Input";
 import { useState, useEffect } from "react";
 //Styles
 import "../styles/components/columns.scss";
+import NewTask from "./secondary-components/NewTask";
 
 const Columns = (props) => {
   const [more, setMore] = useState("");
@@ -54,62 +55,11 @@ const Columns = (props) => {
   const renderMoree = () => {
     debugger;
     console.log(p);
-    return (
-      <form>
-          <Input
-            labelText="Identificador"
-            inputValue={props.inputValue}
-            // handleChange={handleChange}
-            inputType="text"
-          />
-          <Input
-            labelText="Nombre de la tarea"
-            inputValue={props.inputValue}
-            // handleChange={handleChange}
-            inputType="text"
-          />
-          <Input
-            labelText="Descripción"
-            inputValue={props.inputValue}
-            // handleChange={handleChange}
-            inputType="text"
-          />
-          <Input
-            labelText="Fecha inicio"
-            inputValue={props.inputValue}
-            // handleChange={handleChange}
-            inputType="text"
-          />
-          <Input
-            labelText="Fecha fin"
-            inputValue={props.inputValue}
-            // handleChange={handleChange}
-            inputType="text"
-          />
-          {/* <InputOption
-              p={p}
-              defaultValue={"Escoge el estado..."}
-              firtsValue={"TODO"}
-              secondValue={"IN_PROGRESS"}
-              thirdValue={"DONE"}
-              firtsText={"A hacer"}
-              secondText={"En proceso"}
-              thirdText={"Obj. Cumplido"}
-              updateStatus={updateStatus}
-            />
-            <InputOption
-              p={p}
-              defaultValue={"Escoge la fase..."}
-              firtsValue={"1"}
-              secondValue={"2"}
-              thirdValue={"3"}
-              firtsText={"1"}
-              secondText={"2"}
-              thirdText={"3"}
-              updateStatus={updateStatus} 
-             /> */}
-        </form>
-    );
+    if (more === "clicked") {
+      return (
+        <NewTask />
+      );
+    }
   };
 
   // useEffect
