@@ -37,6 +37,9 @@ function App() {
     found.status = newValue;
     setData([...data]);
   };
+  const handleAddToData = (newTask) => { 
+    setData([...data, newTask]);
+  };
 
   const getUpdatedData = () => {
     const newProcess = data.filter((task) => task.status === "IN_PROGRESS");
@@ -60,6 +63,7 @@ function App() {
         inProcess={inProcess}
         data={data}
         handleUpdatedData={handleUpdatedData}
+        handleAddToData={handleAddToData}
       />
       <Switch>
         <Route path="/" exact />

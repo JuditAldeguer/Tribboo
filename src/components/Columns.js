@@ -53,7 +53,9 @@ const Columns = (props) => {
     debugger;
     console.log(p);
     if (more === "clicked") {
-      return <NewTask updateMore={updateMore} />;
+      return (
+        <NewTask handleAddToData={props.handleAddToData} updateMore={updateMore} />
+      );
     }
   };
 

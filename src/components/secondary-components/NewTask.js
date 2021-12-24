@@ -10,7 +10,17 @@ const NewTask = (props) => {
     
     const handleAdd = () => {
       const updatedMore = "";
-      props.updateMore(updatedMore);
+        props.updateMore(updatedMore);
+        const newTask = {
+          idTask: "b5561ab5-0c28-4801-941e-4750df2cf2fc",
+          taskName: "New",
+          description: "Lorem ipsum dolor sit...",
+          startAt: "21/12/2018",
+          endAt: "24/12/2021",
+          status: "TODO",
+          phase: "1",
+        };
+        props.handleAddToData(newTask);
     };
 
     return (
