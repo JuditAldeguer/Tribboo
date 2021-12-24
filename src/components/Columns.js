@@ -1,12 +1,13 @@
 import TaskItem from "./secondary-components/TaskItem";
 import ModalWindow from "./secondary-components/ModalWindow";
 import Input from "./secondary-components/Input";
-import { useState } from "react";
+// import { useState } from "react";
 //Styles
 import "../styles/components/columns.scss";
+import InputOption from "./secondary-components/InputOption";
 
 const Columns = (props) => {
-  const [more, setMore] = useState("");
+  // const [more, setMore] = useState("");
 
   //render
   const renderListtoDo = () => {
@@ -49,12 +50,12 @@ const Columns = (props) => {
   //   props.handleChange(searchWord);
   // };
 
-
-  const renderMore = () => {
-    debugger;
-    if (more === "clicked") {
+  const renderMore = (p) => {
       return (
-        <ModalWindow title="Introduce una nueva tarea">
+        <ModalWindow
+          handleUpdatedData={props.handleUpdatedData}
+          title="Introduce una nueva tarea"
+        >
           <form>
             <Input
               labelText="Identificador"
@@ -86,56 +87,66 @@ const Columns = (props) => {
               // handleChange={handleChange}
               inputType="text"
             />
-            <Input
-              labelText="Estado"
-              inputValue={props.inputValue}
-              // handleChange={handleChange}
-              inputType="text"
+            {/* <InputOption
+              p={p}
+              defaultValue={"Escoge el estado..."}
+              firtsValue={"TODO"}
+              secondValue={"IN_PROGRESS"}
+              thirdValue={"DONE"}
+              firtsText={"A hacer"}
+              secondText={"En proceso"}
+              thirdText={"Obj. Cumplido"}
+              updateStatus={updateStatus}
             />
-            <Input
-              labelText="Fase"
-              inputValue={props.inputValue}
-              // handleChange={handleChange}
-              inputType="text"
-            />
+            <InputOption
+              p={p}
+              defaultValue={"Escoge la fase..."}
+              firtsValue={"1"}
+              secondValue={"2"}
+              thirdValue={"3"}
+              firtsText={"1"}
+              secondText={"2"}
+              thirdText={"3"}
+              updateStatus={updateStatus} 
+             /> */}
           </form>
         </ModalWindow>
       );
-    }
-    if (more === "" || more === "done") {
-      return (
-        <button
-          className="list-btn"
-          onClick={(ev) => {
-            setMore("clicked");
-            handleClickMore(ev);
-          }}
-        >
-          <i className="fas fa-plus" />
-        </button>
-      );
-    }
   };
 
   //  handle
   const handleClickMore = (ev) => {
-    console.log(more);
-    debugger;
-    if (more === "clicked") {
-      const el = ev.target;
-      const p = el.parentElement.id;
-      console.log(p);
-      setMore("");
-      renderMore(p);
-    }
-    props.handleUpdatedData();
-    // props.handleUpdatedData(id, newValue);
+    // setMore("clicked");
+    // debugger;
+    // console.log(more);
+
+    const el = ev.target;
+    const p = el.closest("h2").textContent;
+    console.log(p);
+    // renderMore(p);
   };
+
+  // const updateClick = () => {
+  //   if (more === "clicked") {
+  //     const el = ev.target;
+  //     const p = el.parentElement.id;
+  //     console.log(p);
+  //     setMore("");
+  //     renderMore(p);
+  //  props.handleUpdatedData(id, newValue);
+  //   }
+  // };
+
 
   return (
     <main className="hstack gap-3 container">
       <div className="border vstack column">
-        <h2 className="column__title">A hacer {renderMore()}</h2>
+        <h2 className="column__title">
+          A hacer
+          <button className="list-btn" onClick={handleClickMore}>
+            <i className="fas fa-plus" />
+          </button>
+        </h2>
         <ul>
           {!Array.isArray(props.toDo) || !props.toDo.length
             ? ""
@@ -143,7 +154,12 @@ const Columns = (props) => {
         </ul>
       </div>
       <div className="border vstack column">
-        <h2 className="column__title">En proceso {renderMore()}</h2>
+        <h2 className="column__title">
+          En proceso{" "}
+          <button className="list-btn" onClick={handleClickMore}>
+            <i className="fas fa-plus" />
+          </button>
+        </h2>
         <ul>
           {!Array.isArray(props.inProcess) || !props.inProcess.length
             ? ""
@@ -151,7 +167,12 @@ const Columns = (props) => {
         </ul>
       </div>
       <div className="border vstack column">
-        <h2 className="column__title">Objetivos cumplidos {renderMore()}</h2>
+        <h2 className="column__title">
+          Objetivos cumplidos{" "}
+          <button className="list-btn" onClick={handleClickMore}>
+            <i className="fas fa-plus" />
+          </button>
+        </h2>
         <ul>
           {!Array.isArray(props.done) || !props.done.length
             ? ""

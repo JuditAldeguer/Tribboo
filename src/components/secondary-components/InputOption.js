@@ -5,17 +5,19 @@ const InputOption = (props) => {
     return (
       <form id={props.p}>
         <select
-        onChange={(ev) => { props.updateStatus(ev) }}
+          onChange={(ev) => {
+            props.updateStatus(ev);
+          }}
           defaultValue="choose"
           name="status"
           id="status"
         >
           <option disabled value="choose">
-            Escoge...
+            {props.defaultValue}
           </option>
-          <option value="TODO">A hacer</option>
-          <option value="IN_PROGRESS">En proceso</option>
-          <option value="DONE">O. Cumplido</option>
+          <option value={props.firtsValue}>{props.firtsText}</option>
+          <option value={props.secondValue}>{props.secondText}</option>
+          <option value={props.thirdValue}>{props.thirdText}</option>
         </select>
       </form>
     );

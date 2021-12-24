@@ -18,7 +18,19 @@ const TaskItem = (props) => {
 
   const renderOptionInput = (p) => {
     if (view === "hidden") {
-      return <InputOption p={p} updateStatus={updateStatus} />;
+      return (
+        <InputOption
+          p={p}
+          defaultValue={"Escoge el estado..."}
+          firtsValue={"TODO"}
+          secondValue={"IN_PROGRESS"}
+          thirdValue={"DONE"}
+          firtsText={"A hacer"}
+          secondText={"En proceso"}
+          thirdText={"Obj. Cumplido"}
+          updateStatus={updateStatus}
+        />
+      );
     } if (view === "" ) {
       return <i className={`${view} fas fa-ellipsis-h`}></i>;
     }
