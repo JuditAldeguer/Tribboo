@@ -10,3 +10,7 @@ button {
 .hidden{
   display: none;
 }
+
+.selected_task{
+   background-color: $primary;
+}

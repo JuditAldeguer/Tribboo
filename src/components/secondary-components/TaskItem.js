@@ -1,6 +1,7 @@
 import { useState } from "react";
 //Styles
 import "../../styles/components/taskItem.scss";
+import InputOption from "./InputOption";
 
 const TaskItem = (props) => {
   const [view, setView] = useState("");
@@ -17,24 +18,8 @@ const TaskItem = (props) => {
 
   const renderOptionInput = (p) => {
     if (view === "hidden") {
-      return (
-        <form id={p}>
-          <select
-            onChange={updateStatus}
-            defaultValue="choose"
-            name="status"
-            id="status"
-          >
-            <option disabled value="choose">
-              Escoge...
-            </option>
-            <option value="TODO">A hacer</option>
-            <option value="IN_PROGRESS">En proceso</option>
-            <option value="DONE">O. Cumplido</option>
-          </select>
-        </form>
-      );
-    } if (view === "" || view === "done") {
+      return <InputOption p={p} updateStatus={updateStatus} />;
+    } if (view === "" ) {
       return <i className={`${view} fas fa-ellipsis-h`}></i>;
     }
    };
@@ -44,8 +29,7 @@ const TaskItem = (props) => {
     const p = s.closest("li").id;
     console.log(p, s.value);
     props.handleUpdatedData(p, s.value);
-    setView("done");
-
+    setView("");
   };
   
   return (
