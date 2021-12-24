@@ -6,7 +6,12 @@ const NewTask = (props) => {
     const handleCancel = () => {
         const updatedMore = "";
         props.updateMore(updatedMore);
-     };
+    };
+    
+    const handleAdd = () => {
+      const updatedMore = "";
+      props.updateMore(updatedMore);
+    };
 
     return (
       <Form className="container bg-light newTask">
@@ -69,7 +74,7 @@ const NewTask = (props) => {
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridState">
-            <Button variant="primary" >
+            <Button variant="primary" onClick={handleAdd}>
               Añadir
             </Button>
           </Form.Group>
