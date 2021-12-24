@@ -6,20 +6,26 @@ const TaskItem = (props) => {
   const [view, setView] = useState("");
 
   const handleClickTask = (ev) => {
-    const el = ev.target;
-    const p = el.parentElement;
-    console.log(p.id);
-    setView("hidden");
-    debugger;
-    renderOptionInput();
+    if (view !== "hidden") {
+      const el = ev.target;
+      const p = el.parentElement;
+      console.log(p.id);
+      setView("hidden");
+      renderOptionInput();
+    }
   };
 
   const renderOptionInput = () => {
     if (view === "hidden") {
       return (
         <form>
-          <select name="status" id="status">
-            <option disabled selected>
+          <select
+            onChange={updateStatus}
+            defaultValue="choose"
+            name="status"
+            id="status"
+          >
+            <option disabled value="choose">
               Escoge...
             </option>
             <option value="IN_PROGRESS">En proceso</option>
@@ -31,6 +37,11 @@ const TaskItem = (props) => {
     }
     return <i className={`${view} fas fa-ellipsis-h`}></i>;
    };
+  
+  const updateStatus = (ev) => {
+    const s = ev.target.value;
+    console.log(s);
+  };
   
   return (
     <li
