@@ -27,14 +27,22 @@ function App() {
   }, [data]);
 
   // //handles
-  // const handleChange = (searchWord) => {
+  //const handleChange = (searchWord) => {
   //   setSearchWord(searchWord);
   // };
 
+  const handleUpdatedData = (id, newValue) => {
+    debugger;
+    const found = data.find((task) => task.idTask === id);
+    found.status = newValue;
+    setData([...data]);
+  };
+
   const getUpdatedData = () => {
-  //   // data.forEach(task => {
-  //   //   if (task.status === "TODO" && toDo > 0) {
-    const newProcess = data.filter((task) => task.status === "IN_PROGRESS")
+    
+    // setData([...data, newData]);
+
+    const newProcess = data.filter((task) => task.status === "IN_PROGRESS");
     setInProcess(newProcess);
     const newToDo = data.filter((task) => task.status === "TODO");
     setToDo(newToDo);
@@ -46,13 +54,15 @@ function App() {
   return (
     <div className="container">
       <Header
-        // inputValue={searchWord} handleChange={handleChange}
+      // inputValue={searchWord} handleChange={handleChange}
       />
       <LateralMenu />
       <Columns
-        toDo={toDo} done={done} inProcess={inProcess}
-        // data={data}
-        // handleData={handleData}
+        toDo={toDo}
+        done={done}
+        inProcess={inProcess}
+        data={data}
+        handleUpdatedData={handleUpdatedData}
       />
       <Switch>
         <Route path="/" exact />

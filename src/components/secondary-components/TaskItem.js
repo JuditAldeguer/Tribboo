@@ -6,31 +6,47 @@ const TaskItem = (props) => {
   const [view, setView] = useState("");
 
   const handleClickTask = (ev) => {
-    const el = ev.target;
-    const p = el.parentElement;
-    console.log(p.id);
-    setView("hidden");
-    debugger;
-    renderOptionInput();
+    if (view !== "hidden") {
+      const el = ev.target;
+      const p = el.parentElement.id;
+      console.log(p);
+      setView("hidden");
+      renderOptionInput(p);
+    }
   };
 
-  const renderOptionInput = () => {
+  const renderOptionInput = (p) => {
     if (view === "hidden") {
       return (
-        <form>
-          <select name="status" id="status">
-            <option disabled selected>
+        <form id={p}>
+          <select
+            onChange={updateStatus}
+            defaultValue="choose"
+            name="status"
+            id="status"
+          >
+            <option disabled value="choose">
               Escoge...
             </option>
-            <option value="IN_PROGRESS">En proceso</option>
             <option value="TODO">A hacer</option>
+            <option value="IN_PROGRESS">En proceso</option>
             <option value="DONE">O. Cumplido</option>
           </select>
         </form>
       );
+    } if (view === "" || view === "done") {
+      return <i className={`${view} fas fa-ellipsis-h`}></i>;
     }
-    return <i className={`${view} fas fa-ellipsis-h`}></i>;
    };
+  
+  const updateStatus = (ev) => {
+    const s = ev.target;
+    const p = s.closest("li").id;
+    console.log(p, s.value);
+    props.handleUpdatedData(p, s.value);
+    setView("done");
+
+  };
   
   return (
     <li
