@@ -1,3 +1,5 @@
+@import '../core/variables.scss';
+
 ul {
   padding-left: 0px;
 }
@@ -10,5 +12,9 @@ ul {
   .list-btn {
     float: right;
     background-color: white;
+    &:hover{
+      background-color: $primary;
+      color: white;
+    }
   }
 }
