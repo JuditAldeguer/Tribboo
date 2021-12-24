@@ -39,9 +39,6 @@ function App() {
   };
 
   const getUpdatedData = () => {
-    
-    // setData([...data, newData]);
-
     const newProcess = data.filter((task) => task.status === "IN_PROGRESS");
     setInProcess(newProcess);
     const newToDo = data.filter((task) => task.status === "TODO");

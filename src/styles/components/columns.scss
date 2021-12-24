@@ -1,5 +1,14 @@
+ul {
+  padding-left: 0px;
+}
 
-
-.list-btn{
-  float: right;
+.column {
+  padding: 1rem;
+  &__title {
+    padding: 0 1rem;
+  }
+  .list-btn {
+    float: right;
+    background-color: white;
+  }
 }
