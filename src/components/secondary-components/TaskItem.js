@@ -28,8 +28,8 @@ const TaskItem = (props) => {
             <option disabled value="choose">
               Escoge...
             </option>
-            <option value="IN_PROGRESS">En proceso</option>
             <option value="TODO">A hacer</option>
+            <option value="IN_PROGRESS">En proceso</option>
             <option value="DONE">O. Cumplido</option>
           </select>
         </form>
@@ -43,7 +43,7 @@ const TaskItem = (props) => {
     const s = ev.target;
     const p = s.closest("li").id;
     console.log(p, s.value);
-    props.getUpdatedData(p, s.value);
+    props.handleUpdatedData(p, s.value);
     setView("done");
 
   };
