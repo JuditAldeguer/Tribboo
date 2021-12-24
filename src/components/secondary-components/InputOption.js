@@ -1,4 +1,3 @@
-import { useState } from "react";
 //Styles
 import "../../styles/components/inputOption.scss";
 
@@ -6,7 +5,7 @@ const InputOption = (props) => {
     return (
       <form id={props.p}>
         <select
-                onChange={(ev) => { props.updateStatus(ev) }}
+        onChange={(ev) => { props.updateStatus(ev) }}
           defaultValue="choose"
           name="status"
           id="status"

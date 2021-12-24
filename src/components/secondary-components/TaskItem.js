@@ -19,7 +19,7 @@ const TaskItem = (props) => {
   const renderOptionInput = (p) => {
     if (view === "hidden") {
       return <InputOption p={p} updateStatus={updateStatus} />;
-    } if (view === "" || view === "done") {
+    } if (view === "" ) {
       return <i className={`${view} fas fa-ellipsis-h`}></i>;
     }
    };
@@ -29,7 +29,7 @@ const TaskItem = (props) => {
     const p = s.closest("li").id;
     console.log(p, s.value);
     props.handleUpdatedData(p, s.value);
-    setView("done");
+    setView("");
   };
   
   return (
