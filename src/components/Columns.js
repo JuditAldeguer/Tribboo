@@ -1,7 +1,4 @@
 import TaskItem from "./secondary-components/TaskItem";
-import ModalWindow from "./secondary-components/ModalWindow";
-import InputOption from "./secondary-components/InputOption";
-import Input from "./secondary-components/Input";
 import { useState, useEffect } from "react";
 //Styles
 import "../styles/components/columns.scss";
@@ -52,33 +49,23 @@ const Columns = (props) => {
   //   props.handleChange(searchWord);
   // };
 
-  const renderMoree = () => {
-    debugger;
+  const renderMore = () => {
     console.log(p);
     if (more === "clicked") {
-      return <NewTask updateMore={updateMore} />;
+      return (
+        <NewTask actualStatus={p} handleAddToData={props.handleAddToData} updateMore={updateMore} />
+      );
     }
   };
 
   const updateMore = (updated) => {
-    debugger;
     setMore(updated);
   };
 
   // useEffect
   useEffect(() => {
-    renderMoree();
+    renderMore();
   }, [more]);
-
-  const renderMore = () => {
-    debugger;
-    console.log(more, p);
-    if (more === "clicked") {
-      debugger;
-      console.log(p);
-      return <p>Hola {p}</p>;
-    }
-  };
 
   //  handle
   const handleClickMore = (ev) => {
@@ -101,12 +88,10 @@ const Columns = (props) => {
 
   return (
     <>
-      {renderMoree()}
+      {renderMore()}
       <main className="hstack gap-3 container">
         <div className="border vstack column">
-          <h2 className="column__title">
-            A hacer
-            <button className="list-btn" onClick={handleClickMore}>
+          <h2 className="column__title">A hacer<button className="list-btn" onClick={handleClickMore}>
               <i className="fas fa-plus" />
             </button>
           </h2>
@@ -117,9 +102,7 @@ const Columns = (props) => {
           </ul>
         </div>
         <div className="border vstack column">
-          <h2 className="column__title">
-            En proceso{" "}
-            <button className="list-btn" onClick={handleClickMore}>
+          <h2 className="column__title">En proceso<button className="list-btn" onClick={handleClickMore}>
               <i className="fas fa-plus" />
             </button>
           </h2>
@@ -130,9 +113,7 @@ const Columns = (props) => {
           </ul>
         </div>
         <div className="border vstack column">
-          <h2 className="column__title">
-            Objetivos cumplidos{" "}
-            <button className="list-btn" onClick={handleClickMore}>
+          <h2 className="column__title">Objetivos cumplidos<button className="list-btn" onClick={handleClickMore}>
               <i className="fas fa-plus" />
             </button>
           </h2>
