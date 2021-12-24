@@ -3,7 +3,10 @@ import { Form, Row, Col, Button } from "react-bootstrap";
 import "../../styles/components/newTask.scss";
 
 const NewTask = (props) => {
-    const handleCancel = (ev) => { };
+    const handleCancel = () => {
+        const updatedMore = "";
+        props.updateMore(updatedMore);
+     };
 
     return (
       <Form className="container bg-light newTask">
@@ -60,13 +63,13 @@ const NewTask = (props) => {
 
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridState">
-            <Button variant="dark" type="submit">
+            <Button variant="dark" onClick={handleCancel}>
               Cancelar
             </Button>
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridState">
-            <Button variant="primary" type="submit" onClick={handleCancel}>
+            <Button variant="primary" >
               Añadir
             </Button>
           </Form.Group>

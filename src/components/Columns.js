@@ -56,10 +56,13 @@ const Columns = (props) => {
     debugger;
     console.log(p);
     if (more === "clicked") {
-      return (
-        <NewTask />
-      );
+      return <NewTask updateMore={updateMore} />;
     }
+  };
+
+  const updateMore = (updated) => {
+    debugger;
+    setMore(updated);
   };
 
   // useEffect
