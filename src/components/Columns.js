@@ -50,17 +50,15 @@ const Columns = (props) => {
   // };
 
   const renderMore = () => {
-    debugger;
     console.log(p);
     if (more === "clicked") {
       return (
-        <NewTask handleAddToData={props.handleAddToData} updateMore={updateMore} />
+        <NewTask actualStatus={p} handleAddToData={props.handleAddToData} updateMore={updateMore} />
       );
     }
   };
 
   const updateMore = (updated) => {
-    debugger;
     setMore(updated);
   };
 
@@ -93,9 +91,7 @@ const Columns = (props) => {
       {renderMore()}
       <main className="hstack gap-3 container">
         <div className="border vstack column">
-          <h2 className="column__title">
-            A hacer
-            <button className="list-btn" onClick={handleClickMore}>
+          <h2 className="column__title">A hacer<button className="list-btn" onClick={handleClickMore}>
               <i className="fas fa-plus" />
             </button>
           </h2>
@@ -106,9 +102,7 @@ const Columns = (props) => {
           </ul>
         </div>
         <div className="border vstack column">
-          <h2 className="column__title">
-            En proceso{" "}
-            <button className="list-btn" onClick={handleClickMore}>
+          <h2 className="column__title">En proceso<button className="list-btn" onClick={handleClickMore}>
               <i className="fas fa-plus" />
             </button>
           </h2>
@@ -119,9 +113,7 @@ const Columns = (props) => {
           </ul>
         </div>
         <div className="border vstack column">
-          <h2 className="column__title">
-            Objetivos cumplidos{" "}
-            <button className="list-btn" onClick={handleClickMore}>
+          <h2 className="column__title">Objetivos cumplidos<button className="list-btn" onClick={handleClickMore}>
               <i className="fas fa-plus" />
             </button>
           </h2>
