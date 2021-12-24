@@ -46,13 +46,15 @@ function App() {
   return (
     <div className="container">
       <Header
-        // inputValue={searchWord} handleChange={handleChange}
+      // inputValue={searchWord} handleChange={handleChange}
       />
       <LateralMenu />
       <Columns
-        toDo={toDo} done={done} inProcess={inProcess}
-        // data={data}
-        // handleData={handleData}
+        toDo={toDo}
+        done={done}
+        inProcess={inProcess}
+        data={data}
+        getUpdatedData={getUpdatedData}
       />
       <Switch>
         <Route path="/" exact />

@@ -8,17 +8,17 @@ const TaskItem = (props) => {
   const handleClickTask = (ev) => {
     if (view !== "hidden") {
       const el = ev.target;
-      const p = el.parentElement;
-      console.log(p.id);
+      const p = el.parentElement.id;
+      console.log(p);
       setView("hidden");
-      renderOptionInput();
+      renderOptionInput(p);
     }
   };
 
-  const renderOptionInput = () => {
+  const renderOptionInput = (p) => {
     if (view === "hidden") {
       return (
-        <form>
+        <form id={p}>
           <select
             onChange={updateStatus}
             defaultValue="choose"
@@ -34,13 +34,18 @@ const TaskItem = (props) => {
           </select>
         </form>
       );
+    } if (view === "" || view === "done") {
+      return <i className={`${view} fas fa-ellipsis-h`}></i>;
     }
-    return <i className={`${view} fas fa-ellipsis-h`}></i>;
    };
   
   const updateStatus = (ev) => {
-    const s = ev.target.value;
-    console.log(s);
+    const s = ev.target;
+    const p = s.closest("li").id;
+    console.log(p, s.value);
+    props.getUpdatedData(p, s.value);
+    setView("done");
+
   };
   
   return (

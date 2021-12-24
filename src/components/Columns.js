@@ -6,19 +6,19 @@ const Columns = (props) => {
   //render
   const renderListtoDo = () => {
     return props.toDo.map((task) => {
-      return <TaskItem task={task} />;
+      return <TaskItem data={props.data} getUpdatedData={props.getUpdatedData} task={task} />;
     });
   };
 
   const renderListInProcess = () => {
     return props.inProcess.map((task) => {
-      return <TaskItem task={task} />;
+      return <TaskItem data={props.data} getUpdatedData={props.getUpdatedData} task={task} />;
     });
   };
 
   const renderListDone = () => {
     return props.done.map((task) => {
-      return <TaskItem task={task} />;
+      return <TaskItem data={props.data} getUpdatedData={props.getUpdatedData} task={task} />;
     });
   };
 
@@ -44,7 +44,7 @@ const Columns = (props) => {
           A hacer{" "}
           <button
             className="list-btn"
-            // onClick={handleUpdateData}
+            // onClick={props.getUpdatedData}
           >
             <i className="fas fa-plus" />
           </button>
@@ -56,7 +56,7 @@ const Columns = (props) => {
           En proceso{" "}
           <button
             className="list-btn"
-            // onClick={handleUpdateData}
+            // onClick={props.getUpdatedData}
           >
             <i className="fas fa-plus" />
           </button>
@@ -68,7 +68,7 @@ const Columns = (props) => {
           Objetivos cumplidos{" "}
           <button
             className="list-btn"
-            // onClick={handleUpdateData}
+            // onClick={props.getUpdatedData}
           >
             <i className="fas fa-plus" />
           </button>
