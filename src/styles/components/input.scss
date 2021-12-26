@@ -1,22 +1,36 @@
 @import '../core/mixins.scss';
 
+
 .inner-addon {
   position: relative;
+  input {
+  border-radius: 1rem;
+  }
+  .fas {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+  }
+
+
 }
-.inner-addon .fas {
-  position: absolute;
-  padding: 10px;
-  pointer-events: none;
+
+.left-addon {
+  .fas {
+    left: 0px;
+  }
+  input {
+  padding-left: 30px; 
+  }
 }
-.left-addon .fas {
-  left: 0px;
-}
-.right-addon .fas {
+
+
+.right-addon {
+  .fas {
   right: 0px;
-}
-.left-addon input {
-  padding-left: 30px;
-}
-.right-addon input {
+  }
+
+   input {
   padding-right: 30px;
+  }
 }
