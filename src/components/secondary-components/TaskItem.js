@@ -11,7 +11,6 @@ const TaskItem = (props) => {
     if (view !== "hidden") {
       const el = ev.target;
       const p = el.parentElement.id;
-      console.log(p);
       setView("hidden");
       renderOptionInput(p);
     }

@@ -6,7 +6,6 @@ import user from "../images/user2.png";
 import Input from "./secondary-components/Input";
 
 const Header = (props) => {
-  const [selected, setSelected] = useState("");
   const [state, setState] = useState(false);
   const handleChange = (searchWord) => {
     props.handleChange(searchWord);

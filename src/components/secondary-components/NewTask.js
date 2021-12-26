@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 //Styles
 import { Form, Row, Col, Button } from "react-bootstrap";
 import "../../styles/components/newTask.scss";
@@ -53,7 +53,6 @@ const NewTask = (props) => {
   //   }
   //   if (s === "Objetivos cumplidos") {
   //     a = "DONE";
-  //     console.log(a);
   //     return a;
   //   }
 
