@@ -53,7 +53,6 @@ const Columns = (props) => {
   // };
 
   const renderMore = () => {
-    console.log(p);
     if (more === "clicked") {
       return (
         <NewTask actualStatus={p} handleAddToData={props.handleAddToData} updateMore={updateMore} />
@@ -78,16 +77,7 @@ const Columns = (props) => {
     setP(p);
   };
 
-  // const updateClick = () => {
-  //   if (more === "clicked") {
-  //     const el = ev.target;
-  //     const p = el.parentElement.id;
-  //     console.log(p);
-  //     setMore("");
-  //     renderMore(p);
-  //  props.handleUpdatedData(id, newValue);
-  //   }
-  // };
+  
 
   return (
     <>

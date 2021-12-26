@@ -53,7 +53,6 @@ const NewTask = (props) => {
   //   }
   //   if (s === "Objetivos cumplidos") {
   //     a = "DONE";
-  //     console.log(a);
   //     return a;
   //   }
 

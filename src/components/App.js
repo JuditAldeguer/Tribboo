@@ -29,7 +29,6 @@ function App() {
   // handles
   const handleChange = (searchWord) => {
     setSearchWord(searchWord);
-    console.log(searchWord);
   };
 
   const handleUpdatedData = (id, newValue) => {
