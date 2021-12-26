@@ -16,12 +16,15 @@
   }
 }
 
-
-
-.list-group-item{
-  margin: 1rem;
-  .fa-ellipsis-h{
-  float: right;
+.list {
+  &-group-item {
+    margin: 1rem;
+    .fa-ellipsis-h {
+      float: right;
+      cursor: pointer;
+    }
   }
-
+  &--title{
+      cursor: pointer;
+  }
 }

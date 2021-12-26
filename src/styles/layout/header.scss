@@ -8,14 +8,17 @@ header {
 .title {
   text-align: left;
   font-weight: bold;
+  min-width: max-content;
 }
-
+.btn-white{
+  background-color: white;
+}
 .btn-yellow{
    padding: 0.2rem 1rem;
    margin: 0.2rem;
    border-radius: 1rem;
    &:hover{
-    background-color: $primary !important;
+    background-color: $primary;
   }
 }
 .submenu-rigth{
@@ -24,10 +27,8 @@ header {
     padding: 0 2rem;
   }
 }
-.btn-line{
-  &:hover{
-    border-right: solid 0.5rem $primary;
-  }
+.btn{
+  transform: scale(2);
 }
 .selected-link {
   color: $primary;

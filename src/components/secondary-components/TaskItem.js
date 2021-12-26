@@ -51,7 +51,7 @@ const TaskItem = (props) => {
       props.searchWord !== "" &&
       props.task.taskName.toLowerCase().includes(props.searchWord.toLowerCase())
     ) {
-      return "selected_task";
+      return "selected";
     } 
   }
 
@@ -61,9 +61,11 @@ const TaskItem = (props) => {
       id={props.task.idTask}
       className="list-group-item bg-light"
     >
-      <h3 onClick={handleClickTask} className={searchWordSelected()}>
+      <h3
+        onClick={handleClickTask}
+        className={`list--title ${searchWordSelected()}`}
+      >
         {props.task.taskName} {renderOptionInput()}
-        
       </h3>
       <p>{props.task.description}</p>
       <button className={`fase fase--${props.task.phase}`}>

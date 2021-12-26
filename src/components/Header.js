@@ -1,3 +1,4 @@
+import { useState } from "react";
 //Styless
 import "../styles/layout/header.scss";
 import user from "../images/user2.png";
@@ -5,7 +6,9 @@ import user from "../images/user2.png";
 import Input from "./secondary-components/Input";
 
 const Header = (props) => {
-   const handleChange = (searchWord) => {
+  const [selected, setSelected] = useState("");
+  const [state, setState] = useState(false);
+  const handleChange = (searchWord) => {
     props.handleChange(searchWord);
   };
 
@@ -14,17 +17,25 @@ const Header = (props) => {
       <section>
         <div className="row">
           <h1 className="title">
-            Planning/ Nombre del Proyecto{" "}
-            <i
-              role="button"
-              className="fas fa-chevron-down"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseButons"
-              aria-expanded="true"
-              aria-controls="collapseButons"
-            ></i>{" "}
-            <i className="far fa-star"></i>
+            Planning/ Nombre del Proyecto
+            <button className="btn-white">
+              <i
+                className="fas fa-chevron-down"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseButons"
+                aria-expanded="true"
+                aria-controls="collapseButons"
+              ></i>
+            </button>
+            <button className="btn-white">
+              <i
+                className={`far fa-star ${state ? "selected" : ""}`}
+                onClick={(e) => {
+                  const update = !state;
+                  setState(update);
+                }}
+              ></i>
+            </button>
           </h1>
           <section className="collapsed" id="collapseButons">
             <button className="btn-yellow submenu__button">Presupuestos</button>

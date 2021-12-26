@@ -3,12 +3,17 @@
 .nav{
   height: 100vh;
   background-color: $secondary;
-  width: fit-content;
+  width: max-content;
   padding-top: 1rem;
   text-align: center;
   align-items: center;
   justify-content: space-between
 ;
+.btn-line{
+  &:hover{
+    border-right: solid 0.5rem $primary;
+  }
+}
   .first-el{    
     margin-top: 2rem;
     margin-bottom: 2rem;
