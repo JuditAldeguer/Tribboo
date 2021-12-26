@@ -1,3 +1,4 @@
+import { getByTitle } from "@testing-library/react";
 import { useState } from "react";
 //Styles
 import "../../styles/components/taskItem.scss";
@@ -39,18 +40,28 @@ const TaskItem = (props) => {
   const updateStatus = (ev) => {
     const s = ev.target;
     const p = s.closest("li").id;
-    console.log(p, s.value);
     props.handleUpdatedData(p, s.value);
     setView("");
   };
   
+  const searchWordSelected = (ev) => {
+    debugger;
+    console.log(ev);
+    if (
+      props.searchWord !== "" &&
+      props.task.taskName.toLowerCase().includes(props.searchWord.toLowerCase())
+    ) {
+      return "selected_task";
+    } 
+  }
+
   return (
     <li
       key={props.task.idTask}
       id={props.task.idTask}
       className="list-group-item bg-light"
     >
-      <h3 onClick={handleClickTask}>
+      <h3 onClick={handleClickTask} className={searchWordSelected()}>
         {props.task.taskName} {renderOptionInput()}
         
       </h3>

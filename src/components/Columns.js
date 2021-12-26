@@ -13,6 +13,7 @@ const Columns = (props) => {
     return props.toDo.map((task) => {
       return (
         <TaskItem
+          searchWord={props.searchWord}
           data={props.data}
           handleUpdatedData={props.handleUpdatedData}
           task={task}
@@ -25,6 +26,7 @@ const Columns = (props) => {
     return props.inProcess.map((task) => {
       return (
         <TaskItem
+          searchWord={props.searchWord}
           data={props.data}
           handleUpdatedData={props.handleUpdatedData}
           task={task}
@@ -37,6 +39,7 @@ const Columns = (props) => {
     return props.done.map((task) => {
       return (
         <TaskItem
+          searchWord={props.searchWord}
           data={props.data}
           handleUpdatedData={props.handleUpdatedData}
           task={task}

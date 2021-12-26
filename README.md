@@ -14,16 +14,15 @@
 
   - Obtener información de los tareas iniciales del documento facilitado **initialState.json** y guardarlos en el estado con **useState**
   - Pintar los tareas iniciales
+  - Cambiar el estado de las tareas: A hacer, En proceso, Objetivo Cumplido
+  - Añadir nuevas tareas - incluye formulario con validación.
   - Posibilidad de **filtrar** según nombre
   - Para una mejor estructura, está desglosado en **Componentes**
   - Tres visualizaciones distintas usando **Route, Switch**
   - Informar con una visalización distinta si no existe la url **notFoundPage** con el uso de **ModalWindows**.
-  - Mantenimiento de variables de estado **useState** de las búsquedas realizadas
-  - Usar **Bootstrap** por dar estilo
+  - Uso de **Bootstrap** por dar estilo
   - Introducir **defaultProps** y **propTypes** en los inputs
 
-  Añadidos de forma proactiva:
-  - **ButtonGetBack** que te redirige atrás en el historial con el uso de **window.history.back();** dentro de **notFoundPage**
 
 - Qué partes tiene  
   Contiene tres partes claras:
@@ -33,6 +32,7 @@
      - Menú
   2. El _lateralMenu_
   3. El _main_
+     - Fromulario que aparece al clicar en +
      - Columnas de estado del proyecto
      - Visualización de las tareas
 
