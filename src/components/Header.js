@@ -29,7 +29,7 @@ const Header = (props) => {
             </button>
             <button className="btn-white">
               <i
-                className={`far fa-star ${state ? "selected" : ""}`}
+                className={`${state ? "fas" : "far"} fa-star`}
                 onClick={(e) => {
                   const update = !state;
                   setState(update);
