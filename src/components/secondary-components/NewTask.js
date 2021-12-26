@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 //Styles
 import { Form, Row, Col, Button } from "react-bootstrap";
 import "../../styles/components/newTask.scss";

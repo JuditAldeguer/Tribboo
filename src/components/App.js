@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
-// import PropTypes from 'prop-types';
 //Services
-// import ls from '../services/local-storage.js'; //localStorage
 import t from "../services/initialState.json";
 //Styles
 import '../styles/App.scss';
@@ -72,23 +70,5 @@ function App() {
     </div>
   );
 }
-
-// // DefalutProps
-// Input.defaultProps = {
-//   inputType: 'text',
-//   placeholder: 'Escribe aqui...',
-//   labelText: 'Escribe aqui: ',
-// };
-
-// // PropTypes
-// Input.propTypes = {
-//   id: PropTypes.string,
-//   labelText: PropTypes.string.isRequired,
-//   inputType: PropTypes.string,
-//   inputName: PropTypes.string.isRequired,
-//   inputPlaceholder: PropTypes.string,
-//   inputValue: PropTypes.string,
-//   handleChange: PropTypes.func.isRequired,
-// };
 
 export default App;

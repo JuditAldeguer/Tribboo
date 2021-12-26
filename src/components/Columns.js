@@ -48,10 +48,6 @@ const Columns = (props) => {
     });
   };
 
-  //  const handleChange = (searchWord) => {
-  //   props.handleChange(searchWord);
-  // };
-
   const renderMore = () => {
     if (more === "clicked") {
       return (

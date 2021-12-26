@@ -44,7 +44,6 @@ Input.propTypes = {
   inputType: PropTypes.string,
   inputName: PropTypes.string,
   inputPlaceholder: PropTypes.string,
-  // searchWord: PropTypes.string,
   handleChange: PropTypes.func,
 };
 
