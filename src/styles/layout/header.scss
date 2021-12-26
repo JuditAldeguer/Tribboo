@@ -1,40 +1,54 @@
-@import '../core/variables.scss';
+@import "../core/variables.scss";
+@import "../core/mixins.scss";
 
 header {
   display: flex;
+  padding: 0px;
+  @include tablet{
   justify-content: space-evenly;
   margin-bottom: 3rem;
+  }
 }
-.title {
-  text-align: left;
-  font-weight: bold;
+.left-section {
+  &--title {
+    text-align: left;
+    font-weight: bold;
+    width: 100%;
+      @include tablet{
+    min-width: max-content;
+      }
+  }
 }
 
-.btn-yellow{
-   padding: 0.2rem 1rem;
-   margin: 0.2rem;
-   border-radius: 1rem;
-   &:hover{
-    background-color: $primary !important;
+.right-section {
+  text-align: right;
+  .form{
+    justify-content: end;
   }
-}
-.submenu-rigth{
-  &__button{
-    margin: 0 -1rem;
-    padding: 0 2rem;
+  &--btn {
+    transform: scale(2);
   }
-}
-.btn-line{
-  &:hover{
-    border-right: solid 0.5rem $primary;
+  &--user {
+    width: 40px;
+    margin-left: 0.5rem;
   }
-}
-.selected-link {
-  color: $primary;
-  font-weight: bolder;
-  font-size: larger;
-}
-.user{
-  width: 40px;
+  &submenu {
+    &__button {
+      margin: 0 -1rem;
+      padding: 0 2rem;
+    }
+  }
 }
 
+.btn-yellow {
+  padding: 0.2rem 1rem;
+  margin: 0.2rem;
+  border-radius: 1rem;
+  &:hover {
+    background-color: $primary;
+  }
+}
+
+.btn-white {
+  background-color: white;
+}

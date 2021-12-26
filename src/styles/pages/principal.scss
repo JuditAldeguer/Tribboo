@@ -1,4 +1,6 @@
 @import '../core/variables.scss';
+@import "../core/mixins.scss";
+
 
 button {
   border: none;
@@ -11,7 +13,7 @@ button {
   display: none;
 }
 
-.selected_task{
+.selected{
    background-color: $primary;
 }
 
