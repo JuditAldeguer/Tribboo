@@ -20,22 +20,19 @@ const NewTask = (props) => {
     props.updateMore(updatedMore);
   };
 
-    const handleAdd = (e) => {
-        debugger;
+  const handleAdd = (e) => {
+    debugger;
     const form = e.target.closest("form");
     if (
-      form.checkValidity() === false ||
-      newTask.status === "" ||
-      newTask.status === "CHOOSE"
+      form.checkValidity() === false
+      // || newTask.phase === ""
+      // || newTask.status === ""
     ) {
       e.preventDefault();
       e.stopPropagation();
 
       setValidated(true);
     } else {
-      debugger;
-      console.log(newTask);
-      console.log(newTask.idTask);
       props.handleAddToData(newTask);
       const updatedMore = "";
       props.updateMore(updatedMore);
@@ -49,30 +46,29 @@ const NewTask = (props) => {
     const i = e.target.id;
     console.log(i);
     SetNewTask({ ...newTask, [e.target.id]: v });
-    // newTask.idTask = e.target.value;
-  };
-  const defaultStatus = () => {
-    debugger;
-    const s = props.actualStatus;
-    let a = "CHOOSE";
-    if (s === "A hacer") {
-      a = "TODO";
-      return a;
-    }
-    if (s === "En proceso") {
-      a = "IN_PROGRESS";
-      return a;
-    }
-    if (s === "Objetivos cumplidos") {
-      a = "DONE";
-      console.log(a);
-      return a;
-    }
-
-    return a;
   };
 
-  console.log("status: ", defaultStatus());
+  // const defaultStatus = () => {
+  //   debugger;
+  //   const s = props.actualStatus;
+  //   let a = "";
+  //   if (s === "A hacer") {
+  //     a = "TODO";
+  //     return a;
+  //   }
+  //   if (s === "En proceso") {
+  //     a = "IN_PROGRESS";
+  //     return a;
+  //   }
+  //   if (s === "Objetivos cumplidos") {
+  //     a = "DONE";
+  //     console.log(a);
+  //     return a;
+  //   }
+
+  //   return a;
+  // };
+
 
   return (
     <Form
@@ -145,11 +141,13 @@ const NewTask = (props) => {
           <Form.Label>Estado</Form.Label>
           <Form.Select
             required
-            value={newTask.status}
-            defaultValue={defaultStatus()}
+            value={newTask.status === "" ? "" : newTask.status}
+            // defaultValue={defaultStatus()}
             onChange={handleChange}
           >
-            <option value={"CHOOSE"} disabled>Escoge el estado...</option>
+            <option value={""} className="disabled" disabled>
+              Escoge el estado...
+            </option>
             <option value={"TODO"}>A hacer</option>
             <option value={"IN_PROGRESS"}>En proceso</option>
             <option value={"DONE"}>Obj. Cumplido</option>
@@ -159,11 +157,13 @@ const NewTask = (props) => {
           <Form.Label>Fase</Form.Label>
           <Form.Select
             required
-            defaultValue="CHOOSE"
+            defaultValue=""
             value={newTask.phase}
             onChange={handleChange}
           >
-            <option value={"CHOOSE"} disabled>Escoge la fase...</option>
+            <option value={""} className="disabled" disabled>
+              Escoge la fase...
+            </option>
             <option value={"1"}>1</option>
             <option value={"2"}>2</option>
             <option value={"3"}>3</option>
