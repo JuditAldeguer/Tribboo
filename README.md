@@ -43,6 +43,7 @@
       - Visualización de las tareas ordenadas no solo por cada columna de estado, sino también por fase.
       - Opción de al añadir una nueva tarea, dejar el identificativo vacio el cual se generaría de forma automatica informando al usuario de ello.
       - Al crear nueva tarea, añadir validación que confirme que la fecha inicio es anterior a la fecha de fin prevista.
+      - También al crear nueva tarea, que conste como estado por defecto, el correspondiente a la columna desde la cual se ha clicado. --> inicié el proceso y esta en el código comentado pero no conseguí que fuera efectivo. 
       - Guardar los datos en LocalStorage / BBDD dichas nuevas tareas y/o modificaciones. 
 
 
