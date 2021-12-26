@@ -16,12 +16,12 @@
   - Pintar los tareas iniciales
   - Cambiar el estado de las tareas: A hacer, En proceso, Objetivo Cumplido
   - Añadir nuevas tareas - incluye formulario con validación.
-  - Posibilidad de **filtrar** según nombre
+  - Posibilidad de **destacar** las tareas según nombre gracias al buscador
   - Para una mejor estructura, está desglosado en **Componentes**
   - Tres visualizaciones distintas usando **Route, Switch**
   - Informar con una visalización distinta si no existe la url **notFoundPage** con el uso de **ModalWindows**.
-  - Uso de **Bootstrap** por dar estilo
-  - Introducir **defaultProps** y **propTypes** en los inputs
+  - Uso de **Bootstrap** por dar estilo 
+  - Introducir **defaultProps** y **propTypes** en input text
 
 
 - Qué partes tiene  
@@ -36,6 +36,16 @@
      - Columnas de estado del proyecto
      - Visualización de las tareas
 
+- Qué se podría añadir  
+  - Actualemnte no es un diseño responsive, la visualización correcta es el **versión PC (1200px)**. Suelo trabajar con mobile first y responsive, sin embargo he querido emplear **Bootstrap** el cual estoy aprendiendo ahora, con el fin de seguir avanzando.
+  - En proceso de añadir más testing y trabajar con la métodologia Test Driven Development (TDD).
+  - Posibilidad de añadir más funcionalidades como, por ejemplo:
+      - Visualización de las tareas ordenadas no solo por cada columna de estado, sino también por fase.
+      - Opción de al añadir una nueva tarea, dejar el identificativo vacio el cual se generaría de forma automatica informando al usuario de ello.
+      - Al crear nueva tarea, añadir validación que confirme que la fecha inicio es anterior a la fecha de fin prevista.
+      - Guardar los datos en LocalStorage / BBDD dichas nuevas tareas y/o modificaciones. 
+
+
 - Qué tecnologías usa
   He usado los lenguages HTML, CSS, JavaScript y React.  
   El preprocesador de CSS usado ha sido SAAS pues garcias al react-starter-Kit he podido usar diferentes herramientas como la _automatización de gulp_.
@@ -46,5 +56,5 @@
 - Cómo se ejecuta  
   Una vez se dispone de estas herramientas bien ubicadas, con los comandos <npm install> y <npm start> podrás empezar a hacer uso del React-Starter-Kit y sus facilidades.
 
-Espero que te guste mi trabajo y que puedas darme indicaciones para seguir mejorando.  
+Espero que os guste mi trabajo, por supuesto tengotodavía mucho a mejorar pero no me faltan ganas! Espero que podáis darme indicaciones para seguir mejorando.  
 Gracias por adelantado!!
