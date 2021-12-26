@@ -53,11 +53,10 @@ function App() {
 
   return (
     <div className="container">
-      <Header
-      inputValue={searchWord} handleChange={handleChange}
-      />
+      <Header inputValue={searchWord} handleChange={handleChange} />
       <LateralMenu />
       <Columns
+        searchWord={searchWord}
         toDo={toDo}
         done={done}
         inProcess={inProcess}
@@ -68,7 +67,7 @@ function App() {
       <Switch>
         <Route path="/" exact />
         <Route>
-             <NotFoundPage />
+          <NotFoundPage />
         </Route>
       </Switch>
     </div>
