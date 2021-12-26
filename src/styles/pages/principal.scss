@@ -14,3 +14,8 @@ button {
 .selected_task{
    background-color: $primary;
 }
+
+.disabled{
+  opacity: 0.9;
+  color: rgb(189, 187, 187);
+}
