@@ -13,7 +13,7 @@ import Columns from "./Columns";
 import NotFoundPage from './secondary-components/NotFoundPage';
 
 function App() {
-  // //useState
+  //useState
   // // const [searchWord, setSearchWord] = useState("");
   const [data, setData] = useState(t);
   const [toDo, setToDo] = useState([]);
@@ -26,7 +26,7 @@ function App() {
     getUpdatedData();
   }, [data]);
 
-  // //handles
+  //handles
   //const handleChange = (searchWord) => {
   //   setSearchWord(searchWord);
   // };
@@ -68,7 +68,7 @@ function App() {
       <Switch>
         <Route path="/" exact />
         <Route>
-          <NotFoundPage />
+             <NotFoundPage />
         </Route>
       </Switch>
     </div>
