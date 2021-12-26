@@ -21,13 +21,8 @@ const NewTask = (props) => {
   };
 
   const handleAdd = (e) => {
-    debugger;
     const form = e.target.closest("form");
-    if (
-      form.checkValidity() === false
-      // || newTask.phase === ""
-      // || newTask.status === ""
-    ) {
+    if (      form.checkValidity() === false    ) {
       e.preventDefault();
       e.stopPropagation();
 
@@ -40,16 +35,12 @@ const NewTask = (props) => {
   };
 
   const handleChange = (e) => {
-    debugger;
-    console.log(e.target.value, e.target.id);
     const v = e.target.value;
     const i = e.target.id;
-    console.log(i);
-    SetNewTask({ ...newTask, [e.target.id]: v });
+    SetNewTask({ ...newTask, [i]: v });
   };
 
   // const defaultStatus = () => {
-  //   debugger;
   //   const s = props.actualStatus;
   //   let a = "";
   //   if (s === "A hacer") {

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 // import PropTypes from 'prop-types';
 //Services
-import ls from '../services/local-storage.js'; //localStorage
+// import ls from '../services/local-storage.js'; //localStorage
 import t from "../services/initialState.json";
 //Styles
 import '../styles/App.scss';
@@ -14,7 +14,7 @@ import NotFoundPage from './secondary-components/NotFoundPage';
 
 function App() {
   //useState
-  // // const [searchWord, setSearchWord] = useState("");
+  const [searchWord, setSearchWord] = useState("");
   const [data, setData] = useState(t);
   const [toDo, setToDo] = useState([]);
   const [inProcess, setInProcess] = useState([]);
@@ -26,13 +26,13 @@ function App() {
     getUpdatedData();
   }, [data]);
 
-  //handles
-  //const handleChange = (searchWord) => {
-  //   setSearchWord(searchWord);
-  // };
+  // handles
+  const handleChange = (searchWord) => {
+    setSearchWord(searchWord);
+    console.log(searchWord);
+  };
 
   const handleUpdatedData = (id, newValue) => {
-    debugger;
     const found = data.find((task) => task.idTask === id);
     found.status = newValue;
     setData([...data]);
@@ -54,7 +54,7 @@ function App() {
   return (
     <div className="container">
       <Header
-      // inputValue={searchWord} handleChange={handleChange}
+      inputValue={searchWord} handleChange={handleChange}
       />
       <LateralMenu />
       <Columns

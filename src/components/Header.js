@@ -5,9 +5,9 @@ import user from "../images/user2.png";
 import Input from "./secondary-components/Input";
 
 const Header = (props) => {
-  //  const handleChange = (searchWord) => {
-  //   props.handleChange(searchWord);
-  // };
+   const handleChange = (searchWord) => {
+    props.handleChange(searchWord);
+  };
 
   return (
     <header className="container">
@@ -24,7 +24,6 @@ const Header = (props) => {
               aria-expanded="true"
               aria-controls="collapseButons"
             ></i>{" "}
-            {/* pendiente de hacerlo interactivo - collapsable - cambiar clase collapsed por collapse */}
             <i className="far fa-star"></i>
           </h1>
           <section className="collapsed" id="collapseButons">
@@ -47,7 +46,7 @@ const Header = (props) => {
           <Input
             labelText=""
             inputValue={props.inputValue}
-            // handleChange={handleChange}
+            handleChange={handleChange}
             inputType="text"
           />
 
