@@ -44,9 +44,7 @@ const TaskItem = (props) => {
     setView("");
   };
   
-  const searchWordSelected = (ev) => {
-    debugger;
-    console.log(ev);
+  const searchWordSelected = () => {
     if (
       props.searchWord !== "" &&
       props.task.taskName.toLowerCase().includes(props.searchWord.toLowerCase())

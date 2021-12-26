@@ -1,41 +1,46 @@
-@import '../core/variables.scss';
+@import "../core/variables.scss";
 
 header {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 3rem;
 }
-.title {
-  text-align: left;
-  font-weight: bold;
-  min-width: max-content;
+.left-section {
+  &--title {
+    text-align: left;
+    font-weight: bold;
+    min-width: max-content;
+  }
 }
-.btn-white{
-  background-color: white;
+
+.right-section {
+  text-align: right;
+  .form{
+    justify-content: end;
+  }
+  &--btn {
+    transform: scale(2);
+  }
+  &--user {
+    width: 40px;
+  }
+  &submenu {
+    &__button {
+      margin: 0 -1rem;
+      padding: 0 2rem;
+    }
+  }
 }
-.btn-yellow{
-   padding: 0.2rem 1rem;
-   margin: 0.2rem;
-   border-radius: 1rem;
-   &:hover{
+
+.btn-yellow {
+  padding: 0.2rem 1rem;
+  margin: 0.2rem;
+  border-radius: 1rem;
+  &:hover {
     background-color: $primary;
   }
 }
-.submenu-rigth{
-  &__button{
-    margin: 0 -1rem;
-    padding: 0 2rem;
-  }
-}
-.btn{
-  transform: scale(2);
-}
-.selected-link {
-  color: $primary;
-  font-weight: bolder;
-  font-size: larger;
-}
-.user{
-  width: 40px;
-}
 
+.btn-white {
+  background-color: white;
+}

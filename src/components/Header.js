@@ -14,9 +14,9 @@ const Header = (props) => {
 
   return (
     <header className="container">
-      <section>
+      <section className="left-section">
         <div className="row">
-          <h1 className="title">
+          <h1 className="left-section--title">
             Planning/ Nombre del Proyecto
             <button className="btn-white">
               <i
@@ -37,21 +37,22 @@ const Header = (props) => {
               ></i>
             </button>
           </h1>
-          <section className="collapsed" id="collapseButons">
-            <button className="btn-yellow submenu__button">Presupuestos</button>
-            <button className="btn-yellow submenu__button">Planning</button>
-            <button className="btn-yellow submenu__button">
-              Certificaciones
-            </button>
+          <section
+            className="left-section--submenu collapsed"
+            id="collapseButons"
+          >
+            <button className="btn-yellow">Presupuestos</button>
+            <button className="btn-yellow ">Planning</button>
+            <button className="btn-yellow ">Certificaciones</button>
           </section>
         </div>
       </section>
-      <section className="row submenu">
-        <form className="hstack">
-          <button className="btn">
+      <section className="row right-section">
+        <form className="hstack form">
+          <button className="right-section--btn btn">
             <i className="far fa-question-circle"></i>
           </button>
-          <button className="btn">
+          <button className="right-section--btn btn">
             <i className="fas fa-share-alt"></i>
           </button>
           <Input
@@ -61,13 +62,17 @@ const Header = (props) => {
             inputType="text"
           />
 
-          <img className="user" src={user} alt="usuario" />
+          <img className="right-section--user" src={user} alt="usuario" />
         </form>
 
-        <section className="submenu-rigth">
-          <button className="btn-yellow submenu-rigth__button">Gantt</button>
-          <button className="btn-yellow submenu-rigth__button">Kamban</button>
-          <button className="btn-yellow submenu-rigth__button">
+        <section className="right-section--submenu">
+          <button className="btn-yellow right-section--submenu__button">
+            Gantt
+          </button>
+          <button className="btn-yellow right-section--submenu__button">
+            Kamban
+          </button>
+          <button className="btn-yellow right-section--submenu__button">
             Calendario
           </button>
         </section>
