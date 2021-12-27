@@ -5,27 +5,59 @@ header {
   display: flex;
   flex-direction: column;
   padding: 0px;
-  @include tablet{
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin-bottom: 3rem;
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 0;
   }
+  @include desktop {
+     margin-bottom: 2rem;
+    }
 }
 .left-section {
-  &--title {
+  text-align: center;
+  @include tablet {
     text-align: left;
+    font-size: 0.8rem;
+  }
+   @include desktop {
+      font-size: 1rem;
+    }
+  &--title {
     font-weight: bold;
     width: 100%;
-      @include tablet{
-    min-width: max-content;
-      }
+    @include tablet {
+      min-width: max-content;
+      font-size: 1.4rem;
+    }
+     @include desktop {
+      font-size: 2rem;
+    }
   }
 }
 
 .right-section {
-  text-align: right;
-  .form{
+  text-align: center;
+  margin: 1rem 0;
+  @include tablet {
+    margin: 0;
+    font-size: 0.8rem;
+    --bs-gutter-x: 0;
+  }
+   @include desktop {
+    text-align: right;
+      font-size: 1rem;
+    }
+  .form {
     justify-content: end;
+    transform: scale(0.8);
+    @include tablet {
+      justify-content: end;
+      transform: scale(0.7);
+    }
+    @include desktop {
+      transform: scale(1);
+    }
   }
   &--btn {
     transform: scale(2);

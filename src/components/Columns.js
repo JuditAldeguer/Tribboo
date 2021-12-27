@@ -78,7 +78,7 @@ const Columns = (props) => {
   return (
     <>
       {renderMore()}
-      <main className={`${window.matchMedia("(min-width: 400px)").matches? "hstack" : "vstack "} gap-3 container`}>
+      <main className={`${window.matchMedia("(min-width: 768px)").matches? "hstack" : "vstack "} gap-3 container`}>
         <div className="border vstack column">
           <h2 className="column__title">A hacer<button className="list-btn" onClick={handleClickMore}>
               <i className="fas fa-plus" />

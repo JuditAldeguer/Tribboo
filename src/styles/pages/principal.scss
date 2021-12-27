@@ -2,6 +2,12 @@
 @import "../core/mixins.scss";
 
 
+#root{
+  padding-left: 2rem;
+   @include tablet {
+      padding-left: 0;
+    }
+}
 button {
   border: none;
    &:hover{

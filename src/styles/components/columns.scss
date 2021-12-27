@@ -1,19 +1,29 @@
-@import '../core/variables.scss';
+@import "../core/variables.scss";
+@import "../core/mixins.scss";
 
 ul {
   padding-left: 0px;
 }
+.hstack  {
+    @include tablet {
+      transform: scale(0.9);
+    }
+     @include desktop {
+      transform: scale(1);
+    }
+  }
 
 .column {
   padding: 1rem;
   margin-bottom: 1rem;
+  
   &__title {
     padding: 0 1rem;
   }
   .list-btn {
     float: right;
     background-color: white;
-    &:hover{
+    &:hover {
       background-color: $primary;
       color: white;
     }
