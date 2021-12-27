@@ -5,7 +5,7 @@
 - Dónde localizarlo  
    Mi trabajo se encuentra en el repositorio de Github y puedes encontrar facilmente el link a Github Page que da acceso a la última versión de mi **rama master** en el apartado _About_. [Acceder a la web](https://github.com/JuditAldeguer/Tribboo.git)
 
-  Deseo destacar que he seguido un **diseño responsive**, el cual varia al pasar de versión mobil a tablet y a desktop.
+  Deseo destacar que he seguido un **diseño responsive**, el cual varia al pasar de versión mobil a tablet y a desktop - la versión afin a la facilitada en la prueba es la **versión PC (1200px)**.
 
   Por otro lado, como podrás ver, este trabajo consta de dos ramas **rama dev** para todo lo que está en desarrollo y **rama master** que contiene el producto final.
 
@@ -37,8 +37,7 @@
      - Visualización de las tareas
 
 - Qué se podría añadir  
-  - Actualemnte no es un diseño responsive, la visualización correcta es el **versión PC (1200px)**. Suelo trabajar con mobile first y responsive, sin embargo he querido emplear **Bootstrap** el cual estoy aprendiendo ahora, con el fin de seguir avanzando.
-  - En proceso de añadir más testing y trabajar con la métodologia Test Driven Development (TDD).
+  - Añadir más testing y trabajar con la métodologia Test Driven Development (TDD).
   - Posibilidad de añadir más funcionalidades como, por ejemplo:
       - Visualización de las tareas ordenadas no solo por cada columna de estado, sino también por fase.
       - Opción de al añadir una nueva tarea, dejar el identificativo vacio el cual se generaría de forma automatica informando al usuario de ello.
