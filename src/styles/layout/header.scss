@@ -3,8 +3,10 @@
 
 header {
   display: flex;
+  flex-direction: column;
   padding: 0px;
   @include tablet{
+  flex-direction: row;
   justify-content: space-evenly;
   margin-bottom: 3rem;
   }
