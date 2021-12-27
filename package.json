@@ -1,5 +1,5 @@
 {
-  "name": "mi-primera-web",
+  "name": "tribboo",
   "homepage": "./",
   "version": "0.1.0",
   "private": true,
@@ -43,5 +43,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^8.11.1",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2"
   }
 }
