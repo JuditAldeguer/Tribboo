@@ -1,11 +1,11 @@
 import { render, screen } from '@testing-library/react';
-import App from '../components/App';
+import Header from '../components/Header';
 
-test('renders "Hola mundo"', () => {
+test('renders "Nombre del Proyecto"', () => {
   // Arrange
-  render(<App />);
+  render(<Header />);
   // Act
-  const divElement = screen.getByText('Hola mundo');
+  const divElement = screen.getByText("Nombre del Proyecto");
   // Assert
   expect(divElement).toBeInTheDocument();
 });
